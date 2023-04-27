@@ -149,7 +149,9 @@ nav.sticky .menu li a:hover {
 	color: #fff;
 	text-shadow: 3px 3px 2px rgba(0, 0, 0, .1);
 }
-
+a {
+	color: inherit;
+}
 .white {
 	background: #fff;
 	color: #111;

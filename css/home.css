@@ -129,35 +129,34 @@
 .project .project-content {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 30px;
+	column-gap: 5%;
 	margin-top: 0px;
 }
-.project .project-content .box {
-	background: url('../img/logoHD.jpg') no-repeat;
-	background-size: cover;
-	background-position: center;
-	border-radius: 50px;
-	overflow: hidden;
-	cursor: pointer;
+.project .box h2 {
+	position: relative;
+	font-size: 2.7em;
+	text-align: center;
+	padding-bottom: 15px;
+	transition: all .6s ease;
 }
-.project .project-content .content {
-	backdrop-filter: blur(5px);
-	background: rgba(0, 0, 0, .7);
-	height: 100%;
-	padding: 5% 5%;
+.project .box:hover h2 {
+	translate: 0 -30%;
 }
-.project .project-content .box a {
-	color: #fff;
-}
-.project .project-content .box .name {
-	color: lightskyblue;
-	font-size: 25px;
-	font-weight: 600;
-	text-shadow: 2px 2px 3px rgba(0, 0, 0, .6);
+.project .content {
+	border-radius: 10px;
 	overflow: hidden;
 }
-
-
+.project .box p {
+	text-align: justify;
+}
+.project img {
+	width: 90%;
+	border-radius: 20px;
+	transition: box-shadow .6s ease;
+}
+.project .box:hover img {
+	box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+}
 
 
 
