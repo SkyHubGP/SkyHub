@@ -150,8 +150,61 @@ nav.sticky .menu li a:hover {
 	text-shadow: 3px 3px 2px rgba(0, 0, 0, .1);
 }
 
+/* FOOTER START */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding-bottom: 80px;
+  font-size: 16px;
+  line-height: 1.6;
+}
 
-@media (max-width: 1200px) {
+.footer-wrapper {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact, .links {
+  flex-basis: 45%;
+  text-align: left;
+}
+
+.contact h3, .links h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links li {
+  margin-bottom: 10px;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #ccc;
+}
+
+
+
+@media (max-width: 1024px) {
 	.menu-toggle {
 	  cursor: pointer;
 	  height: 15px;
@@ -211,8 +264,8 @@ nav.sticky .menu li a:hover {
 	  padding: 0;
 	  position: absolute;
 	  top: 70%;
-	  right: 5%;
-	  width: 30%;
+	  right: 2%;
+	  width: 20%;
 	}
 	.menu-toggle.active ul li {
 		background-color: #111;
@@ -231,15 +284,15 @@ nav.sticky .menu li a:hover {
 	.menu a {
 	  color: #fff;
 	  display: block;
-	  padding: 10px;
+	  padding: 7px;
 	  text-align: center;
 	  text-decoration: none;
 	  transition: background-color 0.2s ease-in-out;
 	}
 
 	.menu.active a:hover {
-	  background-color: rgba(135, 206, 250, .8);
-	  color: #fff;
+	  background-color: rgba(135, 206, 250, .3);
+	  color: #ddd;
 	}
 }
 
