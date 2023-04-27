@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Numérix - pôle Ballon sonde</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/ballon-sonde.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<!-- Navigation bar START -->
+	<nav>
+		<div class="wrap">
+			<div class="logo"><a href="index.html"><span>Numé</span>rix.</a></div>
+
+			<ul class="menu">
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="trajectoire.html">Trajectoire</a></li>
+				<li><a href="ballon-sonde.html">Ballon Sonde</a></li>
+				<li><a href="joukovsky.html">Joukovski</a></li>
+				<li><a href="soufflerie.html">Soufflerie</a></li>
+				<!--<li><a href="consignes.html">Consignes</a></li>-->
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Photo title START -->
+	<section class="home" id="home">
+		<div class="wrap">
+			<div class="home-content">
+				<div class="text-1">Vous visitez le pôle</div>
+				<div class="text-2">Ballon Sonde</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Description START -->
+	<section class="about" id="about">
+		<div class="wrap">
+			<h2 class="title">Ballon Sonde</h2>
+			<div class="about-content">
+				<div class="flex">
+					<div class="left"><img src="img/ballon/Image1.jpg"></div>
+					<div class="right">
+						<div class="titre">Présentation des différents pôles :</div><br>
+
+						<div class="titre">Développement électronique :</div>
+						<p>Ce pôle est en charge de la recherche, de la sélection et du codage des capteurs embarqués de la nacelle du ballon sonde. Il est également responsable de l’organisation à l’intérieur de celle-ci.</p>
+
+						<div class="titre">Conception CATIA :</div>
+						<p>Ce pôle est en responsable de la conception de la nacelle sur CATIA, du choix des matériaux et de la création de la maquette.</p>
+
+						<div class="titre">Administration :</div>
+						<p>Ce pôle rend possible ce projet en prenant compte des législations et en s’occupant des aspects administratifs du lancement.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Sommaire START -->
+	<section class="section-1" id="section-1">
+		<div class="wrap">
+			<h2 class="title">Organisation de la page</h2>
+			<div class="section-1-content">
+
+				<ol>
+					<li class="animation"><a href="#grand-1">Quel est notre pôle ?</a></li>
+					<li class="animation"><a href="#grand-2">Composants électroniques</a></li>
+					<li class="animation"><a href="#grand-3">Code Arduino</a></li>
+					<li class="animation"><a href="#grand-4">Administration et Législation</a></li>
+				</ol>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Section-2 Grand 1A -->
+	<section class="section-2" id="grand-1">
+		<div class="wrap">
+			<h2 class="title-1">I. Quel est notre pôle ?</h2>
+			<h2 class="title-2">A - Qu'est ce qu'un ballon sonde ?</h2>
+			<div class="section-2-content">
+				<p>Un <span class="color">ballon sonde</span> ou « ballon météorologique » est un outil permettant de faire des mesures utiles dans le domaine de la météorologie en s’élevant dans le ciel. Toutes les stations météorologiques à travers le monde envoient deux ballons par jour à 0 et 12 heures TU (Temps universel). Il existe de nombreux types de ballons sonde, mais le plus commun et celui que nous lancerons sera le « ballon sonde standard » capable d’emporter des charges légères et pouvant monter jusqu’à une altitude de 35 kilomètres grâce à son ballon composé majoritairement en latex et gonflé à l’hélium. </p>
+				<div class="partie-1">
+					<div class="left"><img src="img/ballon/Image2.jpg"></div>
+					<div class="right">
+						<p>Le ballon est constitué de différents composants, tous ayant pour obligation de suivre les critères et les normes définies par la direction générale de l’aviation civile :</p>
+						<ul>
+							<li class="list">Le ballon lui-même, tirant le reste de la chaîne</li>
+							<li class="list">Un <span class="color">parachute</span> dans la plupart des cas, afin de permettre une descente <i>en douceur</i></li>
+							<li class="list">Un <span class="color">transpondeur</span> permettant aux contrôleurs aériens de connaître sa position ou un réflecteur radar pour les ballons les plus simples</li>
+							<li class="list">Une ou plusieurs <span class="color">nacelles</span>, pouvant souvent se détacher à des phases différentes du vol, si nécessaire chacune avec son parachute et/ou son propre <span class="color">transpondeur</span>. C'est la nacelle qui contient les expériences, capteurs et caméras.</li>
+						</ul>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section-2 Grand 1B -->
+	<section class="section-2">
+		<div class="wrap">
+			<h2 class="title-1">I. Quel est notre pôle ?</h2>
+			<h2 class="title-2">B - Qu'est ce qu'un ballon sonde ?</h2>
+			<div class="section-2-content">
+				<div class="partie-1">
+					<div class="left"><img src="img/ballon/Image3.jpg"></div>
+					<div class="right">
+						<p>Même si lancer un ballon sonde peut paraître un peu fou, nous avons de réels objectifs à atteindre avec le lancement :</p>
+						<ul>
+							<li class="list">Effectuer des <span class="color">relevés atmosphériques</span> à l’aide des capteurs dans la nacelle, nous récolterons ensuite ces relevés pour en faire des courbes et des graphiques que nous ajouterons sur ce site. </li>
+							<li class="list"><span class="color">Filmer</span> l’intégralité du vol pour promouvoir nos projets et intégrer cette vidéo sur le site.</li>
+							<li class="list">Coder en <span class="color">Arduino</span> tous nos capteurs pour que le système fonctionne automatiquement et soit autonome afin de collecter les données. </li>
+						</ul>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section-3">
+		<div class="wrap">
+			<h2 class="title-1">II – Composants électroniques</h2>
+			<div class="section-3-content">
+				<p>Afin de mener à bien la récolte des <span class="color">données</span>, nous avions besoin de capteurs pouvant les récupérer dans la très haute atmosphère. Avant de passer à la recherche nous avons pris la décision de coder nos systèmes en <span class="color">Arduino</span> afin que la recherche soit filtrée et que le codage se fasse sans trop de problèmes. Nous avons donc choisi les <span class="color">capteurs</span> dont nous avions besoin avant de les chercher sur internet, s’en suit des heures de recherche pas forcément intéressantes à regarder les caractéristiques de composants Arduino. Nous avons enfin classé tous nos composants dans le tableur suivant avec toutes les caractéristiques importantes :</p>
+
+				<img src="img/ballon/Image4.jpg">
+
+				<p>Après la sélection nous avons pu commander ces composants sur l’ensemble des sites choisis. Nous en avons en mai 2022 reçu une partie mais pas encore assez pour effectuer de vrais tests.</p>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
