@@ -39,7 +39,7 @@
 	height: 85vh;
 	background-size: cover;
 	background-repeat: no-repeat;
-	animation: background-scroll 80s linear infinite;
+	animation: background-scroll 90s linear infinite;
 	background-position: center;
 }
 @keyframes background-scroll {
