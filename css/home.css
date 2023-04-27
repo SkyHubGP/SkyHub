@@ -8,6 +8,7 @@
 	font-family: 'Ubuntu', sans-serif;
 	min-height: 500px;
 	color: #fff;
+	transition: height .6s ease;
 }
 .home .wrap {
 	margin: auto 50px;
@@ -41,6 +42,7 @@
 	background-repeat: no-repeat;
 	animation: background-scroll 90s linear infinite;
 	background-position: center;
+	transition: width .2s, height .6s ease;
 }
 @keyframes background-scroll {
 	0% {
@@ -282,17 +284,17 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 2000px) {
+	.home .home-images {width: 55vw;}
+}
+@media (max-width: 1750px) {
+	.home .home-images {width: 50vw; height: 75vh;}
+	.home {height: 75vh;}
+}
+@media (max-width: 1550px) {
+	.home .home-images {width: 45vw; height: 60vh;}
+	.home {height: 60vh;}
+}
 
 @media (max-width: 1465px) {
 	.project .project-content {
@@ -301,6 +303,7 @@
 	.project .box .box-content {
 		font-size: 16px;
 	}
+	.home .home-images {width: 40vw;}
 }
 
 @media (max-width: 1371px) {
@@ -314,6 +317,9 @@
 	.project .box .box-content .text{
 		font-size: 24px;
 	}
+	.home .home-images {display: none}
+	.home .home-content {text-align: center;}
+	.home .wrap {margin: auto;}
 }
 
 @media (max-width: 1300px) {
@@ -415,9 +421,6 @@
 }
 
 @media (max-width: 1024px) {
-	nav.sticky {
-		display: none;
-	}
 	section {
 		padding: 30px 0;
 	}
