@@ -5,55 +5,53 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SkyHub - Accueil</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-
-	<!-- Barre de Navigation START -->
+	<!-- Navigation bar START -->
 	<nav>
 		<div class="wrap">
 			<div class="logo"><a href="index.html"><span>Sky</span>Hub.</a></div>
 
 			<ul class="menu">
 				<li><a href="#home">Accueil</a></li>
-			      <li><a href="#project">A Propos</a></li>
+				<li><a href="#about">A propos</a></li>
+				<li><a href="#project">Projets</a></li>
 			</ul>
 		</div>
 	</nav>
 
-	<!-- Burger Menu START -->
-	<nav class="navbar">
-    	<div class="nav-links">
-        	<ul>
-          	<li><a href="trajectoire.html">Trajectoire</a></li>
-          	<li><a href="ballon-sonde.html">Ballon Sonde</a></li>
-         	<li><a href="joukovsky.html">Joukowski</a></li>
-          	<li><a href="soufflerie.html">Soufflerie</a></li>
-        	</ul>
-    	</div>
-    	<img src="img/Hamburger_Blc_trsp.png" alt="menu hamburger" class="menu-hbg">
-  </nav>
-
-	<!-- Bande home START -->
+	<!-- Home START -->
 	<section class="home" id="home">
 		<div class="wrap">
 			<div class="home-content">
-				<div class="text-1">Bienvenue dans le Grand-Projetfdsqfdfqsdd</div>
-				<div class="text-2">SkyHub</div>
+				<div class="home-text">
+					<div id="text-1">Bienvenue dans le Grand-Projet</div>
+					<div id="text-2">SkyHub</div>
+					<div id="text-3">Un grand projet de l'IPSA</div>
+				</div>
+				<div class="home-images">
+					
+				</div>
 			</div>
+				
 		</div>
 	</section>
 
 	<!-- Projets START -->
-	<section class="project" id="project">
+	<section class="project white" id="project">
 		<div class="wrap">
-			<h2 class="title">Nos projets</h2>
+			<h2 class="title white">Nos projets</h2>
 			<div class="project-content">
 
+
+
+				<!--
 				<div class="box">
-					<a href="spatial.html">
+					<a href="soufflerie.html">
 						<div class="content">
-							<div class="name">Spatial</div>
+							<div class="name">Soufflerie</div>
 							<p>Ce pôle est dédié à la construction d’une soufflerie expérimentale dans le but qu'elle soit à la disposition des étudiant de l’IPSA lors de leur travaux pratiques, ou encore aux collégiens qui découvrent notre institut comme lors de Journées Portes Ouvertes.</p>
 							Cliquez pour en savoir plus...
 						</div>
@@ -63,8 +61,8 @@
 				<div class="box">
 					<a href="joukovsky.html">
 						<div class="content">
-							<div class="name">Projet</div>
-							<p>Le pôle « Transformation de Joukowski » est dédié à l’étude numérique de l’écoulement de l’air autour d’un profil d’aile. Notre simulation permettra de faire apparaître les lignes de courant autour d’un profil d’aile ainsi que le coefficient de portance associé à celle-ci...</p>
+							<div class="name">Transformation de Joukovski</div>
+							<p>Le pôle « Transformation de Joukovski » est dédié à l’étude numérique de l’écoulement de l’air autour d’un profil d’aile. Notre simulation permettra de faire apparaître les lignes de courant autour d’un profil d’aile ainsi que le coefficient de portance associé à celle-ci...</p>
 							Cliquez pour en savoir plus...
 						</div>
 					</a>
@@ -73,7 +71,7 @@
 				<div class="box">
 					<a href="ballon-sonde.html">
 						<div class="content">
-							<div class="name">Aeronautique </div>
+							<div class="name">Ballon Sonde</div>
 							<p>Ce pôle conçoit un ballon sonde afin de le lancer dans un futur proche. Nous traitons la modélisation CATIA, la recherche, le codage, l'adminisstration, etc...</p>
 							Cliquez pour en savoir plus...
 						</div>
@@ -89,30 +87,21 @@
 						</div>
 					</a>
 				</div>
-
+				-->
 			</div>
 		</div>
 	</section>
-
 
 	<!-- Contact START -->
 	<section class="contact" id="contact">
 		<div class="wrap">
 			<h2 class="title">Nous contacter</h2>
 			<div class="contact-content">
-				<p></p>
+				<p>Envoyez des emails.</p>
 			</div>
 		</div>
 	</section>
 
 	<script src="js/script.js"></script>
 </body>
-<script>
-   const menuHamburger = document.querySelector(".menu-hbg")
-        const navLinks = document.querySelector(".nav-links")
- 
-        menuHamburger.addEventListener('click',()=>{
-        navLinks.classList.toggle('mobile-menu')
-        })
-</script>
 </html>

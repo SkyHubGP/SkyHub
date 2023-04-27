@@ -150,4 +150,24 @@ nav.sticky .menu li a:hover {
 	text-shadow: 3px 3px 2px rgba(0, 0, 0, .1);
 }
 
+.white {
+	background: #fff;
+	color: #111;
+}
+.white .title::before {
+	background: #111;
+}
+.white .title::after {
+	background: #fff;
+}
 
+.black {
+	background: #111;
+	color: #fff;
+}
+.black .title::before {
+	background: #fff;
+}
+.black .title::after {
+	background: #111;
+}

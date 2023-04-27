@@ -2,7 +2,7 @@
 
 /*Home START*/
 .home {
-	background: url('../img/home-background.png');
+	background-color: #111;
 	height: 85vh;
 	display: flex;
 	font-family: 'Ubuntu', sans-serif;
@@ -12,25 +12,65 @@
 .home .wrap {
 	margin: auto 50px;
 }
-.home .home-content .text-1 {
+.home .home-content {
+	display: flex;
+}
+.home .home-text #text-1 {
 	font-size: 42px;
 	font-weight: 500;
 	transition: font-size .3s ease-out;
 }
-.home .home-content .text-2 {
+.home .home-text #text-2 {
 	font-size: 135px;
 	font-weight: 600;
 	margin-left: -4px;
 	transition: font-size .3s ease-out;
 }
-.home .home-content .text-3 {
+.home .home-text #text-3 {
 	font-size: 46px;
 	font-weight: 500;
 	transition: font-size .3s ease-out;
 }
-
+.home .home-images {
+	position: absolute;
+	top: 0px;
+	right: 0;
+	width: 60vw;
+	height: 85vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	animation: background-scroll 80s linear infinite;
+	background-position: center;
+}
+@keyframes background-scroll {
+	0% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/soufflerie/Image2.jpg');
+	}
+	15% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/soufflerie/Image3.jpg');
+	}
+	30% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/soufflerie/Image7.jpg');
+	}
+	45% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/soufflerie/Image8.jpg');
+	}
+	60% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/trajectoire/hubble-3d-mars.png');
+	}
+	75% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/trajectoire/fusee-v_t.png');
+	}
+	90% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/trajectoire/orbite-geo.png');
+	}
+	100% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/ballon/Image5.jpg');
+	}
+}
 
 /*About START*/
+/*
 .about {
 	background: #fff;
 	font-family: 'Poppins', sans-serif;
@@ -72,23 +112,19 @@
 	font-size: 19px;
 	text-align: justify;
 }
-
+*/
 
 /*Project START*/
 .project {
-	background: #111;
-	color: #fff;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
-	text-shadow: #111;
+	text-shadow: #fff;
 }
 .project .title::before {
 	width: 220px;
-	background: #fff;
 }
 .project .title::after {
 	content: "Galerie";
-	background: #111;
 }
 .project .project-content {
 	display: grid;
