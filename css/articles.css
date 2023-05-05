@@ -1,0 +1,99 @@
+hr {
+	height: 1px;
+  	border: none;
+  	background-color: #ccc;
+  	margin: 15px 0;
+}
+img {
+	max-width: 210px;
+	border-radius: 10px;
+}
+.level {
+	color: lightskyblue;
+	font-weight: 400;
+}
+
+.top {
+	background: url('../img/home-background.png');
+	height: 25vh;
+	display: flex;
+	font-family: 'Ubuntu', sans-serif;
+	min-height: 10px;
+	color: #fff;
+}
+
+.top .top-content {
+	display: flex;
+}
+.top .top-content .text {
+	text-align: center;
+	font-size: 90px;
+	font-weight: 600;
+	text-shadow: 20px 20px 10px rgba(20, 20, 20, 1);
+	transition: font-size .3s ease-out;
+}
+
+#articles {
+	padding: 30px 0;
+	transition: padding .3s ease;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+}
+#articles .wrap {
+	display: flex;
+}
+section .article {
+	transition: margin-bottom .3s ease-out;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 30px;
+	font-weight: 500;
+}
+
+#articles .content {
+	width: 70%;
+}
+.article .references {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+	color: #6d6d6d;
+}
+
+
+.sidebar {
+  width: 30%;
+  position: relative;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar hr {
+  height: 1px;
+  border: none;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+  transition: all .3s ease;
+}
+
+.sidebar a:hover {
+  color: lightskyblue;
+  padding-left: 8px;
+}
