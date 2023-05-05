@@ -10,6 +10,14 @@
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/burger-script.js"></script>
+	<script src="js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script>
+	  $(function(){
+		$("#header").load("header.html"); 
+  		$("#footer").load("footer.html"); 
+	  });
+	</script> 
 </head>
 <body>
 	<!-- Navigation bar START -->
@@ -22,7 +30,6 @@
 
 			<ul class="menu">
 				<li><a href="#home">Accueil</a></li>
-				<li><a href="#about">A propos</a></li>
 				<li><a href="#project">Projets</a></li>
 			</ul>
 		</div>
@@ -52,7 +59,7 @@
 			<div class="project-content">
 
 
-				<a href="#home"><div class="box" id="Spatial">
+				<a href="space.html"><div class="box" id="Spatial">
 					<h2>Spatial</h2>
 					<div class="content">
 						<p>Courte description du contenu ?</p>
@@ -60,7 +67,7 @@
 					</div>
 				</div></a>
 
-				<a href="#home"><div class="box" id="Aéronautique">
+				<a href="#Aeronautique"><div class="box" id="Aéronautique">
 					<h2>Aéronautique</h2>
 					<div class="content">
 						<p>Courte description du contenu ?</p>
@@ -69,7 +76,7 @@
 				</div></a>
 
 
-				<a href="#home"><div class="box" id="Projets">
+				<a href="#Projets"><div class="box" id="Projets">
 					<h2>Projets</h2>
 					<div class="content">
 						<p>Courte description du contenu ?</p>
@@ -122,33 +129,11 @@
 	</section>
 
 	<!-- Contact START -->
-	<section class="contact" id="contact">
-		<div class="wrap">
-			<h2 class="title">Nous contacter</h2>
-		</div>
-	</section>
+	<div id="footer"></div>
 
 
-	<footer>
-	  <div class="footer-wrapper contact">
-	    <div class="contact">
-	      <h3>Contact</h3>
-	      <p>skyhubnumerix@gmail.com</p>
-	      <p><br>IPSA-Toulouse<br>41 Bd de la Marquette<br>31000 Toulouse</p>
-	    </div>
-	    <div class="links">
-	      <h3>Liens utiles</h3>
-	      <ul>
-	        <li><a href="https://www.instagram.com/_skyhubb_/" target="_blank">Instagram</a></li>
-	        <li><a href="https://www.tiktok.com/@_sky.hub" target="_blank">TikTok</a></li>
-	        <li><a href="https://www.linkedin.com/in/sky-hub-905041272/" target="_blank">LinkedIn</a></li>
-	        <li><a href="https://www.youtube.com/channel/UCM6GcLJoJ6bghq3gC6W7Cqg" target="_blank">YouTube</a></li>
-	        <li><a href="#Credits" target="_blank">Crédits</a></li>
-	      </ul>
-	    </div>
-	  </div>
-	</footer>
-<script src="js/script.js"></script>
+
+
 </body>
 
 </html>
