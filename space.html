@@ -17,7 +17,6 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	<script>
 	  $(function(){
-		$("#header").load("header.html"); 
   		$("#footer").load("footer.html"); 
 	  });
 	</script> 
@@ -29,7 +28,10 @@
 			<div class="logo"><a href="index.html"><span>Sky</span>Hub.</a></div>
 
 			<ul class="menu">
-				<li><a href="#search"><i class="fa fa-search" aria-hidden="true" style="padding-right: 10px;"></i>Rechercher</a></li>
+				<li>
+					<i class="fa fa-search" aria-hidden="true"style="padding-right: 10px;color: #fff;"></i>
+					<input type="text" placeholder="Rechercher..."></input>
+				</li>
 			</ul>
 		</div>
 	</nav>

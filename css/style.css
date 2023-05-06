@@ -6,6 +6,9 @@
 	box-sizing: border-box;
 	text-decoration: none;
 }
+html {
+	scroll-behavior: smooth;
+}
 .wrap {
 	max-width: 1300px;
 	margin: auto;
@@ -151,6 +154,13 @@ nav .menu li a:hover {
 nav.sticky .menu li a:hover {
 	color: #fff;
 	text-shadow: 3px 3px 2px rgba(0, 0, 0, .1);
+}
+
+nav input[type=text] {
+  float: right;
+  border: none;
+  padding: 6px;
+  font-size: 17px;
 }
 
 /* FOOTER START */

@@ -49,6 +49,10 @@ section .article {
 	font-size: 30px;
 	font-weight: 500;
 }
+section .article >*:not(:last-child) {
+	display: block;
+	margin-bottom: 12px;
+}
 
 #articles .content {
 	width: 70%;
@@ -94,6 +98,5 @@ section .article {
 }
 
 .sidebar a:hover {
-  color: lightskyblue;
   padding-left: 8px;
 }
