@@ -9,6 +9,9 @@ img {
 	border-radius: 10px;
 	vertical-align: middle;
 }
+.article img {
+	margin-right: 20px;
+}
 .level {
 	color: lightskyblue;
 	font-weight: 400;
@@ -64,7 +67,35 @@ section .article >*:not(:last-child) {
 	font-weight: 400;
 	color: #6d6d6d;
 }
+.article .box-content {
+	display: flex;
+}
+.learn-more {
+	position: relative;
+  text-decoration: none;
+  color: blueviolet;
+  transition: all .3s ease;
+}
+.learn-more:hover {
+  color: blue;
+}
+.learn-more::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: blue;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-out;
+}
 
+.learn-more:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 .sidebar {
   width: 30%;
@@ -107,15 +138,15 @@ section .article >*:not(:last-child) {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 }
-.mySlides {display: none;}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4 {display: none;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
-.mySlides img {
+img {
 	display: block;
 	max-width: 100%;
   height: 25vh; /* hauteur fixe */
@@ -142,11 +173,11 @@ section .article >*:not(:last-child) {
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.dot1, .dot2, .dot3, .dot4 {
   height: 12px;
   width: 12px;
   margin: 0 2px;
-  background-color: #999;
+  background-color: #ddd;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
