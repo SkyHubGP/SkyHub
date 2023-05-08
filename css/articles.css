@@ -174,8 +174,8 @@ img {
 
 /* The dots/bullets/indicators */
 .dot1, .dot2, .dot3, .dot4 {
-  height: 12px;
-  width: 12px;
+  height: 9px;
+  width: 9px;
   margin: 0 2px;
   background-color: #ddd;
   border-radius: 50%;

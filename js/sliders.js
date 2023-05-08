@@ -1,9 +1,5 @@
 let slideIndex = 0;
-let slideIndex2 = 0;
-let slideIndex3 = 0;
-let slideIndex4 = 0;
-let slideIndex5 = 0;
-let slideIndex6 = 0;
+
 	showSlides();
 
 	function showSlides() {
