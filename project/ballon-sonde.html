@@ -4,28 +4,25 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Numérix - pôle Ballon sonde</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/ballon-sonde.css">
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/projects.css">
+	<link rel="stylesheet" type="text/css" href="../css/ballon-sonde.css">
+
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script>
+	  $(function(){
+  		$("#footer").load("../footer.html");
+  		$("#navbar").load("../navbar.html");
+	  });
+	</script>
+
 </head>
 <body>
 	<!-- Navigation bar START -->
-	<nav>
-		<div class="wrap">
-			<div class="logo"><a href="index.html"><span>Numé</span>rix.</a></div>
-
-			<ul class="menu">
-				<li><a href="index.html">Accueil</a></li>
-				<li><a href="trajectoire.html">Trajectoire</a></li>
-				<li><a href="ballon-sonde.html">Ballon Sonde</a></li>
-				<li><a href="joukovsky.html">Joukovski</a></li>
-				<li><a href="soufflerie.html">Soufflerie</a></li>
-				<!--<li><a href="consignes.html">Consignes</a></li>-->
-			</ul>
-		</div>
-	</nav>
+	<div id="navbar"></div>
 
 	<!-- Photo title START -->
 	<section class="home" id="home">
@@ -43,7 +40,7 @@
 			<h2 class="title">Ballon Sonde</h2>
 			<div class="about-content">
 				<div class="flex">
-					<div class="left"><img src="img/ballon/Image1.jpg"></div>
+					<div class="left"><img src="../img/ballon/Image1.jpg"></div>
 					<div class="right">
 						<div class="titre">Présentation des différents pôles :</div><br>
 
@@ -86,7 +83,7 @@
 			<div class="section-2-content">
 				<p>Un <span class="color">ballon sonde</span> ou « ballon météorologique » est un outil permettant de faire des mesures utiles dans le domaine de la météorologie en s’élevant dans le ciel. Toutes les stations météorologiques à travers le monde envoient deux ballons par jour à 0 et 12 heures TU (Temps universel). Il existe de nombreux types de ballons sonde, mais le plus commun et celui que nous lancerons sera le « ballon sonde standard » capable d’emporter des charges légères et pouvant monter jusqu’à une altitude de 35 kilomètres grâce à son ballon composé majoritairement en latex et gonflé à l’hélium. </p>
 				<div class="partie-1">
-					<div class="left"><img src="img/ballon/Image2.jpg"></div>
+					<div class="left"><img src="../img/ballon/Image2.jpg"></div>
 					<div class="right">
 						<p>Le ballon est constitué de différents composants, tous ayant pour obligation de suivre les critères et les normes définies par la direction générale de l’aviation civile :</p>
 						<ul>
@@ -108,7 +105,7 @@
 			<h2 class="title-2">B - Qu'est ce qu'un ballon sonde ?</h2>
 			<div class="section-2-content">
 				<div class="partie-1">
-					<div class="left"><img src="img/ballon/Image3.jpg"></div>
+					<div class="left"><img src="../img/ballon/Image3.jpg"></div>
 					<div class="right">
 						<p>Même si lancer un ballon sonde peut paraître un peu fou, nous avons de réels objectifs à atteindre avec le lancement :</p>
 						<ul>
@@ -129,7 +126,7 @@
 			<div class="section-3-content">
 				<p>Afin de mener à bien la récolte des <span class="color">données</span>, nous avions besoin de capteurs pouvant les récupérer dans la très haute atmosphère. Avant de passer à la recherche nous avons pris la décision de coder nos systèmes en <span class="color">Arduino</span> afin que la recherche soit filtrée et que le codage se fasse sans trop de problèmes. Nous avons donc choisi les <span class="color">capteurs</span> dont nous avions besoin avant de les chercher sur internet, s’en suit des heures de recherche pas forcément intéressantes à regarder les caractéristiques de composants Arduino. Nous avons enfin classé tous nos composants dans le tableur suivant avec toutes les caractéristiques importantes :</p>
 
-				<img src="img/ballon/Image4.jpg">
+				<img src="../img/ballon/Image4.jpg">
 
 				<p>Après la sélection nous avons pu commander ces composants sur l’ensemble des sites choisis. Nous en avons en mai 2022 reçu une partie mais pas encore assez pour effectuer de vrais tests.</p>
 			</div>

@@ -5,29 +5,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Numérix - pôle Trajetoire</title>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/projects.css">
-	<link rel="stylesheet" type="text/css" href="css/trajectoire.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/projects.css">
+	<link rel="stylesheet" type="text/css" href="../css/trajectoire.css">
 	
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script>
+	  $(function(){
+  		$("#footer").load("../footer.html");
+  		$("#navbar").load("../navbar.html");
+	  });
+	</script>
+
+	<style type="text/css">
+		nav {
+			position: absolute;
+		}
+		nav.sticky {
+			display: none;
+		}
+	</style>
+
 </head>
 <body>
 	<!-- Navigation bar START -->
-	<nav>
-		<div class="wrap">
-			<div class="logo"><a href="index.html"><span>Sky</span>Hub.</a></div>
-
-			<ul class="menu">
-				<li><a href="index.html">Accueil</a></li>
-				<li><a href="trajectoire.html">Trajectoire</a></li>
-				<li><a href="ballon-sonde.html">Ballon Sonde</a></li>
-				<li><a href="joukovshy.html">Joukovski</a></li>
-				<!--<li><a href="consignes.html">Consignes</a></li>-->
-			</ul>
-		</div>
-	</nav>
+	<div id="navbar"></div>
 
 	<!-- Photo title START -->
 	<section class="home" id="home">
@@ -45,7 +49,7 @@
 			<h2 class="title">Simulation de trajectoires</h2>
 			<div class="about-content">
 				<div class="flex">
-					<div class="left"><img src="img/trajectoire/hubble-3d-mars.png"><img src="img/trajectoire/fusee-v_t.png"><img src="img/trajectoire/fusee-a_t.png"><img src="img/trajectoire/ballon-sonde-vy_h.png"></div>
+					<div class="left"><img src="../img/trajectoire/hubble-3d-mars.png"><img src="00/img/trajectoire/fusee-v_t.png"><img src="../img/trajectoire/fusee-a_t.png"><img src="../img/trajectoire/ballon-sonde-vy_h.png"></div>
 					<div class="right">
 						<div class="titre">Un outil de simulation <span>numérique</span>.</div>
 						<p>Le pôle « Simulation de trajectoire » est dédié à l’étude numérique de la trajectoire d’un objet quelconque dans un milieu qui peut être l’atmosphère terrestre, le vide la lune, mars, etc. Notre simulation permet de tracer la trajectoire de ce corps, dont les caractéristiques telles que la masse, la taille, position, la vitesse, etc. sont libres de choix. Cela peut se faire en 2D ou en 3D, sachant qu’une animation est possible en 2D.</p>
@@ -92,7 +96,7 @@
 				</div>
 
 				<div class="partie-2">
-					<div class="left"><img src="img/trajectoire/Newton-poids.jpg"></div>
+					<div class="left"><img src="../img/trajectoire/Newton-poids.jpg"></div>
 					<div class="right">
 						<p><span class="color">Galilée</span> avait l’intuition vers 1600 qu’une plume et un marteau lâchés au même moment dans le vide tomberait en même temps. C’est ce que <span class="color">Isaac Newton</span> à démontré grâce au Principe Fondamental de la Dynamique (PFD) en 1687 que la masse d’un corps en chute libre<sup>1</sup> est indépendante de sa trajectoire. En effet depuis l’Antiquité d’Aristote, il est « logique » qu’un corps lourd tombe toujours plus vite qu’un corps léger.</p>
 						<p>Explicitons la théorie de Newton, puis vérifions là avec notre outil numérique.</p>
@@ -101,6 +105,7 @@
 				</div>
 
 				<div class="partie-3">
+					<p>$$\sum{\vec{F}}_{EXT}=m\vec{a}$$</p>
 					<li class="titre-petit">Principe Fondamental de la Dynamique</li>
 					<p>Soit un corps \(M\) lâché en chute libre dans l’espace.</p>
 					<p>$$\sum{{\vec{F}}_{ext}(M)}=m\vec{a}\left(M\right)\Longleftrightarrow\vec{P}=m\vec{a}\left(M\right)$$
@@ -125,9 +130,9 @@
 					<div class="left">
 						<li class="titre-petit">Outil numérique</li>
 						<p>Pour montrer que le corps lourd et le corps léger tombent en même temps, on peut tracer leur <strong>vitesse en fonction du temps</strong>. Si le PFD de Newton est correct, on s’attend à avoir une courbe <strong>identique</strong> pour les deux corps, ce qui montrerait qu’en chute libre la masse n’a pas d’influence sur la vitesse, et donc sur la trajectoire.</p>
-						<div class="images"><img src="img/trajectoire/Newton-0,1kg.png"><img src="img/trajectoire/Newton-1000kg.png"></div>
+						<div class="images"><img src="../img/trajectoire/Newton-0,1kg.png"><img src="../img/trajectoire/Newton-1000kg.png"></div>
 					</div>
-					<div class="right"><img src="img/trajectoire/Newton-traj.png"></div>
+					<div class="right"><img src="../img/trajectoire/Newton-traj.png"></div>
 				</div>
 
 				<div class="partie-5">
@@ -136,9 +141,9 @@
 				</div>
 
 				<div class="partie-6">
-					<div><img src="img/trajectoire/hubble-3d-terre.png"><p class="legend">Télescope Hubble sur son orbite de 600km d’altitude avec 28,5° d’inclinaison</p></div>
-					<div><img src="img/trajectoire/orbite-geo.png"><p class="legend">Trajectoire d’une orbite géostationnaire<sup>2</sup>.</p></div>
-					<div><img src="img/trajectoire/orbite-comm.png"><p class="legend">Trajectoire d’un satellite de communication à 550km d’altitude.</p></div>
+					<div><img src="../img/trajectoire/hubble-3d-terre.png"><p class="legend">Télescope Hubble sur son orbite de 600km d’altitude avec 28,5° d’inclinaison</p></div>
+					<div><img src="../img/trajectoire/orbite-geo.png"><p class="legend">Trajectoire d’une orbite géostationnaire<sup>2</sup>.</p></div>
+					<div><img src="../img/trajectoire/orbite-comm.png"><p class="legend">Trajectoire d’un satellite de communication à 550km d’altitude.</p></div>
 				</div>
 				<p class="definitions"><sup>2</sup>Orbite dont le temps de révolution est de 1  jour.</p>
 			</div>
@@ -146,25 +151,8 @@
 		</div>
 	</section>
 
-	<footer>
-	  <div class="footer-wrapper contact">
-	    <div class="contact">
-	      <h3>Contact</h3>
-	      <p>skyhubnumerix@gmail.com</p>
-	      <p><br>IPSA-Toulouse<br>41 Bd de la Marquette<br>31000 Toulouse</p>
-	    </div>
-	    <div class="links">
-	      <h3>Liens utiles</h3>
-	      <ul>
-	        <li><a href="https://www.instagram.com/_skyhubb_/" target="_blank">Instagram</a></li>
-	        <li><a href="https://www.tiktok.com/@_sky.hub" target="_blank">TikTok</a></li>
-	        <li><a href="https://www.linkedin.com/in/sky-hub-905041272/" target="_blank">LinkedIn</a></li>
-	        <li><a href="https://www.youtube.com/channel/UCM6GcLJoJ6bghq3gC6W7Cqg" target="_blank">YouTube</a></li>
-	        <li><a href="#Credits" target="_blank">Crédits</a></li>
-	      </ul>
-	    </div>
-	  </div>
-	</footer>
+	
+	<div id="footer"></div>
 
 	<script src="js/script.js"></script>
 </body>

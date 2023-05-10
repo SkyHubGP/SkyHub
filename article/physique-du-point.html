@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SkyHub - pôle Trajetoire</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<h1> Physique Du point </h1>
+<p>Dans cette partie, nous allons expliquer comment, à partir des lois physiques, on peut prévoir la trajectoire d’une mini-fusée.  
+
+Les principes physiques que nous utiliserons pour cette étude sont les lois de Newton et plus particulièrement la 2ème loi de Newton aussi appelée Principe Fondamental de la Dynamique. Celui-ci énonce que la somme des forces qui s’appliquent à un solide est égale à sa masse multipliée par son accélération. Pour en apprendre plus sur les lois de Newton, vous pouvez regarder les vidéos suivantes :</p>
+<video src="chemin/vers/ma/video.mp4" controls>
+          Mettre le bon lien quand pret
+        </video>
+	<p>Tout d’abord, quelles sont les forces qui agissent sur la fusée ? </p>
+	<h2>Bilan des forces </h2>
+	<p>
+		<ul>
+			<li>Le poids
+				<details>
+  <summary>Cliquer pour en savoir plus </summary>
+  C’est la force exercée par la Terre et qui nous attire vers son centre. Le poids est donc toujours orienté vers le bas. Il s’exprime :\(\vec{P}\)= m\(\vec{g}\) être plus précis qui décrit l’attraction mutuelle entre deux corps. Son expression est : \(F_g = G\frac{m_1 m_2}{r^2}\) avec G une constante
+  <math class="tex2jax_process">m_1m_2</math> les masses des deux corps et r la distance entre le centre de la Terre et la fusée.  
+
+  
+    <p>La force gravitationnelle est représentée par \(\vec{F_g}\).</p>
+  
+</details>
+
+			</li>
+	<li>Les forces de frottements
+		<details>
+			<summary>
+Cliquer pour en savoir plus
+			</summary>
+			Elles sont créées par le contact entre l’air et la fusée et elles s’opposent au mouvement de la fusée. Il en existe deux sortes : des frottements laminaires (l’air est peu perturbé par le passage de la fusée) et des frottements turbulents (l’air est très perturbé par le mouvement de la fusée). Dans le cas laminaire la force de frottement est proportionnelle à la vitesse:
+				 \(\vec{F}\)*l= - lamda*\(\vec{v}\) alors que dans le cas turbulent elle est proportionnelle au carré de la vitesse \(\vec{F}\)*t= - lamda*\(\vec{v}\)*\(\vec{v}\) Le schéma ci-dessous représente le mouvement de l’air au passage de la fusée (représenté par le point rouge). Sur le dessin supérieur l’écoulement est laminaire et sur celui du dessous il est turbulent. <img src="image frottement.png">
+Schéma représentant des écoulements laminaires et turbulents au passage de la fusée 
+		</details>
+		
+	</li>
+	<li>La poussée d’Archimède
+	<details>
+		<summary> Cliquer pour voir plus </summary>Cette force s’applique à un objet plongé dans un fluide. Dans notre cas, il s’agit de l’air. Elle correspond à l’opposé du poids du volume de fluide déplacé et prend en compte le volume de la fusée, la masse volumique de l’air et g, l’intensité de la pesanteur : \(\vec{P_a}\) = - rho*V*\(\vec{g}\). Cette force est donc toujours orientée vers le haut et s’oppose au poids.  
+
+Cependant la masse volumique de la fusée est très grande devant la masse volumique de l’air ainsi la poussée d’Archimède de l’air sur la fusée est négligeable devant le poids de celle-ci.  
+
+	</details>
+		</li>
+		<li>
+			La force du vent
+			<details>
+				<summary>
+					Cliquer pour voir plus
+				</summary>
+				C’est la force que le vent applique sur l’objet. Elle s’exprime \(\vec{F_v}\) = \frac{1}{2}\)*\(C_x\)*rho*{\(\vec{F_g}\)^2}.S avec \(C_x\) le coefficient de traînée, S
+ la surface de la fusée, la masse volumique de l’air et la vitesse du vent.
+			</details>
+		</li>
+		<li>
+			La poussée
+			<details>
+				<summary> Cliquer pour voir plus</summary>
+				 La poussée est une force dont on choisit arbitrairement la valeur ou qui est donnée dans un graphique par le constructeur de la fusée. Elle n’est présente que sur les premières secondes du lancement afin de permettre à la fusée de décoller du sol. Elle est donc supérieure au poids, en norme.  
+
+FormeVous trouvez ci-dessous un schéma représentant les forces qui interviennent sur la fusée : 
+			</details>
+		</li>
+		</ul>
+	</p>
+	<p>
+		Après avoir réalisé le bilan des forces qui agissent sur la fusée, nous appliquons la 2ème loi de Newton, à savoir le Principe Fondamental de la Dynamique (PFD). Celui-ci nous permet de connaître l’accélération de la fusée et (après calcul) d’en déduire sa position à chaque instant. Autrement dit, celui-ci nous permet d’obtenir les équations de la trajectoire selon les trois dimensions.  
+		<details>
+			<summary>
+				Cliquer pour voir plus 
+			</summary>
+			Cas sans frottements (tout ce qui est en bleu est à cacher)  
+
+Nous appliquons la deuxième loi de Newton et projetons nos forces sur les trois dimensions :  
+<p>  EQUATION F5(EXT) </p>
+		</details>
+	</p>
+	<p>
+		Pour les plus curieux d’entre vous, vous trouverez ci-dessous le calcul de la trajectoire en deux dimensions.  
+	</p>
+	<p>
+	On obtient une trajectoire parabolique.  
+
+Cas avec frottements laminaires  
+
+Les calculs sont aussi faisables si on prend en compte des frottements de types laminaires. 	
+	</p>
+	<p> EQUATION DE ACCELERATION</p>
+	<p>
+	Cas avec frottements turbulents  
+
+Cependant, si on prend maintenant en compte des frottements de types turbulents, les calculs ne sont plus faisables théoriquement.  
+
+En voici le détail :  <p> EQUATION DE F </p>	
+	</p>
+	<p>
+		Pour résoudre ces équations et obtenir les équations temporelles de la trajectoire, on doit faire appel à des méthodes numériques tel que Euler ou Runge Kutta. 
+
+En prenant pour exemple une petite fusée de 7 kg, 80mm de diamètre et 1m de longueur lancée à 15 m/s à 60° d’inclinaison, on peut comparer la trajectoire de la fusée si elle évoluait dans le vide (sans frottements), ou dans l’air avec des frottements laminaires ou turbulents. 
+	</p>
+	<p> AJOUTE L'IMAGE</p>
+<p>
+	Le code de calcul Python qui est à votre disposition utilise ces méthodes numériques afin de tracer les paramètres voulues dans le cas du lancement d’une fusée. Grâce à celui-ci, vous pourrez déterminer la trajectoire d’une fusée avec ou sans frottements ou bien même sa vitesse en fonction du temps. Vous pourrez aussi mettre concrètement en application les principes qui vous sont décris dans cet article et visualiser les trajectoires à l’aide de l’application ci-dessous 
+</p>
+<p>AJOUTE L'APPLICATION JAVASCRIPT</p>

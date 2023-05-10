@@ -1,0 +1,204 @@
+hr {
+	height: 1px;
+  	border: none;
+  	background-color: #ccc;
+  	margin: 15px 0;
+}
+img {
+	max-width: 210px;
+	border-radius: 10px;
+	vertical-align: middle;
+}
+.article img {
+	margin-right: 20px;
+}
+.level {
+	color: lightskyblue;
+	font-weight: 400;
+}
+
+.top {
+	background: url('../img/home-background.png');
+	height: 25vh;
+	display: flex;
+	font-family: 'Ubuntu', sans-serif;
+	min-height: 10px;
+	color: #fff;
+}
+
+.top .top-content {
+	display: flex;
+}
+.top .top-content .text {
+	text-align: center;
+	font-size: 90px;
+	font-weight: 600;
+	text-shadow: 20px 20px 10px rgba(20, 20, 20, 1);
+	transition: font-size .3s ease-out;
+}
+
+#articles {
+	padding: 30px 0;
+	transition: padding .3s ease;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+}
+#articles .wrap {
+	display: flex;
+}
+section .article {
+	transition: margin-bottom .3s ease-out;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 30px;
+	font-weight: 500;
+}
+section .article >*:not(:last-child) {
+	display: block;
+	margin-bottom: 12px;
+}
+
+#articles .content {
+	width: 70%;
+}
+.article .references {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+	color: #6d6d6d;
+}
+.article .box-content {
+	display: flex;
+}
+.learn-more {
+	position: relative;
+  text-decoration: none;
+  color: blueviolet;
+  transition: all .3s ease;
+}
+.learn-more:hover {
+  color: blue;
+}
+.learn-more::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: blue;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-out;
+}
+
+.learn-more:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.sidebar {
+  width: 30%;
+  position: relative;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar hr {
+  height: 1px;
+  border: none;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+  transition: all .3s ease;
+}
+
+.sidebar a:hover {
+  padding-left: 8px;
+}
+
+/* SLIDESHOW START */
+.images {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4 {display: none;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+img {
+	display: block;
+	max-width: 100%;
+  height: 25vh; /* hauteur fixe */
+  object-fit: cover;
+  object-position: left;
+}
+/* Caption text */
+.caption {
+  color: #999;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: relative;
+  width: 100%;
+  text-align: left;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #999;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot1, .dot2, .dot3, .dot4 {
+  height: 9px;
+  width: 9px;
+  margin: 0 2px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}

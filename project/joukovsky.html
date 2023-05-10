@@ -4,28 +4,24 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Numérix - pôle Transformation de Joukovsky</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/joukovsky.css">
+	
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/projects.css">
+	<link rel="stylesheet" type="text/css" href="../css/joukovsky.css">
+
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script>
+	  $(function(){
+  		$("#footer").load("../footer.html");
+  		$("#navbar").load("../navbar.html");
+	  });
+	</script>
 </head>
 <body>
 	<!-- Navigation bar START -->
-	<nav>
-		<div class="wrap">
-			<div class="logo"><a href="index.html"><span>Numé</span>rix.</a></div>
-
-			<ul class="menu">
-				<li><a href="index.html">Accueil</a></li>
-				<li><a href="trajectoire.html">Trajectoire</a></li>
-				<li><a href="ballon-sonde.html">Ballon Sonde</a></li>
-				<li><a href="joukovsky.html">Joukovsky</a></li>
-				<li><a href="soufflerie.html">Soufflerie</a></li>
-				<!--<li><a href="consignes.html">Consignes</a></li>-->
-			</ul>
-		</div>
-	</nav>
+	<div id="navbar"></div>
 
 	<!-- Photo title START -->
 	<section class="home" id="home">
