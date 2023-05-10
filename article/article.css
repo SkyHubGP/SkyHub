@@ -5,6 +5,9 @@
 	margin: auto;
 	padding: 0 80px;
 }
+.section img {
+	max-height: 60vh;
+}
 
 /*Home START*/
 .home {

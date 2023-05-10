@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="article.css">
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	<script>
@@ -30,7 +31,7 @@
 	<div id="navbar"></div>
 
 	<section class="home black" id="home">
-			<h1>La physique du point</h1>
+			<h1>Calculer la trajectoire d'une mini fusée</h1>
 	</section>
 
 	<div class="wrapp">
@@ -49,7 +50,7 @@
 		<section class="section">
 			<div class="titre">Bilan des forces</div>
 			<p>Tout d’abord, quelles sont les forces qui agissent sur la fusée ?</p>
-
+			<img src="img/Image2.png">
 			<ul>
 				<li class="list">
 					<b>Le poids</b><br>
@@ -130,10 +131,11 @@
 								<p>
 									Vous trouvez ci-dessous un schéma représentant les forces qui interviennent sur la fusée :
 								</p>
-								<img src="img/Image2.png">
 							</div>
 						</div>
 					</details>
+					<canvas id="Chart_Poussee"></canvas>
+
 				</li>
 				
 			</ul>
@@ -250,3 +252,56 @@
 
 	<div id="footer"></div>
 </body>
+
+</html>
+
+<script type="text/javascript">
+	var x = [0, .01, .5, 1, 1.5, 2, 2.5, 2.97, 3.2, 3.47, 3.59];
+	var y = [0, 893, 798, 739, 659, 586, 513, 417, 225, 67, 0];
+async function createChart_SingleAxis(canvasID) {
+  const ctx = document.getElementById("Chart_Poussee").getContext('2d');
+  var data = {
+  	labels: x,
+  	datasets: [{
+  		label: 'Poussée (N)',
+  		data: y,
+  		fill: true,
+  		borderColor: 'rgb(75, 192, 192',
+  		tension: .2,
+  		point: 2,
+  	}]
+  }
+
+  var options = {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      plugins: {
+        legend: {
+          title: {
+            display: true,
+            text: 'Poussée du moteur en fonction du temps.'
+          }
+        }
+      },
+      elements: {
+        point: {
+          radius: 5
+        }
+      }
+    }
+  var config = {
+    type: 'line',
+    data: data,
+    options: options
+  }
+
+  const Chart_Poussee = new Chart(ctx, config);
+}
+
+createChart_SingleAxis();
+</script>
