@@ -50,6 +50,7 @@
 		<section class="section">
 			<div class="titre">Bilan des forces</div>
 			<p>Tout d’abord, quelles sont les forces qui agissent sur la fusée ?</p>
+			<p>Vous trouvez ci-dessous un schéma représentant les forces qui interviennent sur la fusée :</p>
 			<img src="img/Image2.png">
 			<ul>
 				<li class="list">
@@ -127,14 +128,11 @@
 						<summary>Détails...</summary>
 						<div class="detail-content">
 							<hr>
-							<div class="text">
-								<p>
-									Vous trouvez ci-dessous un schéma représentant les forces qui interviennent sur la fusée :
-								</p>
-							</div>
+							<canvas id="Chart_Poussee"></canvas>
 						</div>
+						
 					</details>
-					<canvas id="Chart_Poussee"></canvas>
+					
 
 				</li>
 				
@@ -289,7 +287,7 @@ async function createChart_SingleAxis(canvasID) {
       },
       elements: {
         point: {
-          radius: 7
+          radius: 6
         }
       }
     }
