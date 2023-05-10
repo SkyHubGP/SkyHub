@@ -9,14 +9,27 @@
 html {
 	scroll-behavior: smooth;
 }
+iframe {
+	box-shadow: 10px 10px 30px #11111150;
+}
 .wrap {
 	max-width: 1300px;
 	margin: auto;
 	padding: 0 80px;
 }
+.wrapp {
+	max-width: 1000px;
+	margin: auto;
+	padding: 0 80px;
+}
+ul {
+	font-size: 19px;
+	text-align: justify;
+}
 section {
 	padding: 80px 0;
 	transition: padding .3s ease;
+	font-family: 'Poppins', sans-serif;
 }
 section .title {
 	position: relative;
@@ -61,7 +74,7 @@ section li {
 }
 section details summary {
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 400;
 	text-align: justify;
 	text-decoration: underline;
 	cursor: pointer;
