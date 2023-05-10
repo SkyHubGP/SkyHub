@@ -256,8 +256,8 @@
 </html>
 
 <script type="text/javascript">
-	var x = [0, .01, .5, 1, 1.5, 2, 2.5, 2.97, 3.2, 3.47, 3.59];
-	var y = [0, 893, 798, 739, 659, 586, 513, 417, 225, 67, 0];
+	var x = [0, .256, .513, .769, 1.026, 1.282, 1.539, 1.795, 2.051, 2.308, 2.564, 2.821, 3.077, 3.334, 3.59];
+	var y = [896.2, 851.8, 808.9, 767.4, 727.3, 688.7, 651.5, 615.8, 579.9, 544.6, 501.4, 450.4, 323.8, 139.0, 3.5];
 async function createChart_SingleAxis(canvasID) {
   const ctx = document.getElementById("Chart_Poussee").getContext('2d');
   var data = {
@@ -268,7 +268,6 @@ async function createChart_SingleAxis(canvasID) {
   		fill: true,
   		borderColor: 'rgb(75, 192, 192',
   		tension: .2,
-  		point: 2,
   	}]
   }
 
@@ -290,7 +289,7 @@ async function createChart_SingleAxis(canvasID) {
       },
       elements: {
         point: {
-          radius: 5
+          radius: 7
         }
       }
     }
