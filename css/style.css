@@ -11,6 +11,8 @@ html {
 }
 iframe {
 	box-shadow: 10px 10px 30px #11111150;
+	width: 60%;
+	min-height: 40vh;
 }
 hr {
 	height: 1px;
