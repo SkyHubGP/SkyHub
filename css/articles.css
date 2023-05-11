@@ -1,16 +1,14 @@
-hr {
-	height: 1px;
-  	border: none;
-  	background-color: #ccc;
-  	margin: 15px 0;
-}
 img {
-	max-width: 210px;
-	border-radius: 10px;
-	vertical-align: middle;
+  display: block;
+  max-width: 100%;
+  height: 25vh; /* hauteur fixe */
+  object-fit: cover;
+  object-position: left;
+  border-radius: 10px;
+  vertical-align: middle;
 }
 .article img {
-	margin-right: 20px;
+	margin-right: 1vw;
 }
 .level {
 	color: lightskyblue;
@@ -19,10 +17,10 @@ img {
 
 .top {
 	background: url('../img/home-background.png');
-	height: 25vh;
+	height: 23vh;
 	display: flex;
 	font-family: 'Ubuntu', sans-serif;
-	min-height: 10px;
+	min-height: 10vh;
 	color: #fff;
 }
 
@@ -31,18 +29,21 @@ img {
 }
 .top .top-content .text {
 	text-align: center;
-	font-size: 90px;
+	font-size: 8vh;
 	font-weight: 600;
 	text-shadow: 20px 20px 10px rgba(20, 20, 20, 1);
 	transition: font-size .3s ease-out;
 }
 
+.box-content {
+  font-family: 'Poppins', sans-serif;
+  font-size: .85em;
+  font-weight: 400;
+}
 #articles {
 	padding: 30px 0;
 	transition: padding .3s ease;
 	font-family: 'Poppins', sans-serif;
-	font-size: 15px;
-	font-weight: 400;
 }
 #articles .wrap {
 	display: flex;
@@ -50,20 +51,22 @@ img {
 section .article {
 	transition: margin-bottom .3s ease-out;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 30px;
+	font-size: 2em;
 	font-weight: 500;
 }
 section .article >*:not(:last-child) {
 	display: block;
-	margin-bottom: 12px;
+	margin-bottom: 1vh;
 }
-
+#articles .titre {
+  font-size: 3.2vh;
+}
 #articles .content {
 	width: 70%;
 }
 .article .references {
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 1.5vh;
 	font-weight: 400;
 	color: #6d6d6d;
 }
@@ -100,10 +103,9 @@ section .article >*:not(:last-child) {
 .sidebar {
   width: 30%;
   position: relative;
-  padding-top: 50px;
-  padding-left: 50px;
+  padding-top: 5.5vh;
+  padding-left: 2.5vw;
 }
-
 .sidebar ul {
   list-style: none;
   padding: 0;
@@ -118,7 +120,6 @@ section .article >*:not(:last-child) {
   height: 1px;
   border: none;
   background-color: #ccc;
-  margin: 10px 0;
 }
 
 .sidebar a {
@@ -146,13 +147,7 @@ section .article >*:not(:last-child) {
   position: relative;
   margin: auto;
 }
-img {
-	display: block;
-	max-width: 100%;
-  height: 25vh; /* hauteur fixe */
-  object-fit: cover;
-  object-position: left;
-}
+
 /* Caption text */
 .caption {
   color: #999;
