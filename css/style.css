@@ -61,6 +61,7 @@ section .title::after {
 }
 section p {
 	font-size: 19px;
+	font-weight: 400;
 	text-align: justify;
 	padding-bottom: 15px;
 }
@@ -129,7 +130,7 @@ nav .wrap {
 }
 nav .logo a {
 	color: #fff;
-	font-size: 43px;
+	font-size: 2.69em;
 	font-weight: 600;
 	transition: all .2s ease;
 }

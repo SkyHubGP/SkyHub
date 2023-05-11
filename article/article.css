@@ -112,14 +112,15 @@
 	padding-left: 34px;
 }
 
+
 @media (max-width: 500px) {
 	.wrapp {
-	max-width: 95vw;
-	margin: auto;
-	padding: 0 10px;
+		max-width: 95vw;
+		margin: auto;
+		padding: 0 10px;
 	}
 	.section img {
-	max-width: 85vw;
+		max-width: 85vw;
 	}
 	iframe {
 		max-width: 85vw;
@@ -130,32 +131,32 @@
 	.home h1 {
 		width: 85vw;
 		margin: 0 auto;
-		font-size: 25px;
+		/*font-size: 25px;*/
 		margin-top: 0px;s
 	}
 	nav .logo a {
-		font-size: 23px;
+		/*font-size: 23px;*/
 	}
 	section p {
-		font-size: 15px;
+		/*font-size: 15px;*/
 		text-align: justify;
 		padding-bottom: 9px;
 	}
 	ul {
-		font-size: 15px;
+		/*font-size: 15px;*/
 	}
 	.section img {
 		max-width: 85vw;
 	}
 	section details summary {
-		font-size: 15px;
+		/*font-size: 15px;*/
 	}
 	.titre {
-		font-size: 21px;
+		/*font-size: 21px;*/
 		margin-bottom: 5px;
 	}
 	.contact h3, .links h3 {
-	  font-size: 18px;
+	  /*font-size: 18px;*/
 	  margin-bottom: 20px;
 	}
 	.footer-wrapper {
@@ -163,10 +164,11 @@
 	}
 	.contact p {
 	  margin: 0;
-	  font-size: 15px;
+	  /*font-size: 15px;*/
 	  line-height: 1.5;
 	}
 	.contact .title {
 		display: none;
 	}
 }
+
