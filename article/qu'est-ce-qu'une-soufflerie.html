@@ -42,7 +42,7 @@
 				<span class="separator"> &#183; </span>Nelly Zimmermann<br>
 				<i class="fa fa-clock-o" aria-hidden="true"></i> 5 mai 2023
 			</div>
-			<div class="titre">Qu'est ce qu'une soufflerie ?</div>
+			<div class="titre">Introduction</div>
 			<p>Une soufflerie est une installation permettant d’analyser l’écoulement de l’air autour d’un objet afin d’étudier notamment l’aérodynamisme et la résistance des matériaux dans des conditions se rapprochant de la réalité. Ce système est très utilisé en aéronautique et spatial car l’étude de l’écoulement de l’air est primordiale. En effet, pour permettre à un avion de voler, il faut avoir testé de nombreux paramètres aérodynamiques dans le but de maximiser la portance, de minimiser la traînée, d’estimer à quel moment l’avion est en situation de décrochage ou encore de tester les limites de l’avion pour qu’il ne se désintègre pas. Ce travail en soufflerie peut être mis en parallèle avec des méthodes numériques comme Joukovski (“lien vers la page Joukovski du site ou publication Instagram”)</p>
 
 			<p>En effet, les tests en souffleries sont effectués à la suite d’analyses sur ordinateur afin de vérifier si les données informatiques se concrétisent bien dans la réalité. C’est donc une illustration de l’étude des fluides numérique.</p>
@@ -104,52 +104,3 @@
 
 </html>
 
-<script type="text/javascript">
-	var x = [0, .256, .513, .769, 1.026, 1.282, 1.539, 1.795, 2.051, 2.308, 2.564, 2.821, 3.077, 3.334, 3.59];
-	var y = [896.2, 851.8, 808.9, 767.4, 727.3, 688.7, 651.5, 615.8, 579.9, 544.6, 501.4, 450.4, 323.8, 139.0, 3.5];
-async function createChart_SingleAxis(canvasID) {
-  const ctx = document.getElementById("Chart_Poussee").getContext('2d');
-  var data = {
-  	labels: x,
-  	datasets: [{
-  		label: 'Poussée (N)',
-  		data: y,
-  		fill: true,
-  		borderColor: 'rgb(75, 192, 192',
-  		tension: .2,
-  	}]
-  }
-
-  var options = {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      },
-      plugins: {
-        legend: {
-          title: {
-            display: true,
-            text: 'Poussée du moteur en fonction du temps.'
-          }
-        }
-      },
-      elements: {
-        point: {
-          radius: 6
-        }
-      }
-    }
-  var config = {
-    type: 'line',
-    data: data,
-    options: options
-  }
-
-  const Chart_Poussee = new Chart(ctx, config);
-}
-
-createChart_SingleAxis();
-</script>
