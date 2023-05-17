@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SkyHub - Spatial</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/articles.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	<script>
+	  $(function(){
+  		$("#footer").load("footer.html"); 
+	  });
+	</script>
+
+	<style type="text/css">
+		nav {
+			position: absolute;
+		}
+		nav.sticky {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<!-- Navigation bar START -->
+	<nav>
+		<div class="wrap">
+			<div class="logo"><a href="index.html"><span>Sky</span>Hub.</a></div>
+
+			<ul class="menu">
+				<li>
+					<i class="fa fa-search" aria-hidden="true"style="padding-right: 10px;color: #fff;"></i>
+					<input type="text" placeholder="Rechercher..."></input>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- header START -->
+	<section class="top" id="space">
+		<div class="wrap">
+			<div class="top-content">
+				<div class="text">Aéronautique</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Projects list START -->
+	<section class="articles" id="articles">
+		<div class="wrap">
+			<div class="content">
+
+				<div class="article" id="L'atmosphère">
+					<div class="titre"><a href="article/qu'est-ce-que-l'atmosphere.html">Qu'est ce que l'atmosphère ? <span class="separator">&#183;</span> <span class="level">Débutant</span></a></div>
+					<div class="references">
+						<i class="fa fa-user-circle-o"></i> Nicolas Mérouze
+						<span class="separator"> &#183; </span>
+						<i class="fa fa-clock-o" aria-hidden="true"></i> 16 mai 2023
+					</div>
+					<div class="box-content">
+						<img src="img/logo.png">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							<br><br>
+							<a class="learn-more" href="article/physique-du-point.html">En savoir plus...</a>
+						</p>
+					</div>
+				</div>
+<!-- IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII-->
+				<hr>
+
+				<div class="article" id="L'attraction-gravitationnelle">
+					<div class="titre"><a href="article/#">titre <span class="separator">&#183;</span> <span class="level">Expert omg</span></a></div>
+					<div class="references">
+						<i class="fa fa-user-circle-o"></i> auteur
+						<span class="separator"> &#183; </span>
+						<i class="fa fa-clock-o" aria-hidden="true"></i> date
+					</div>
+					<div class="box-content">
+						<img src="img/logo.png">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							<br><br>
+							<a class="learn-more" href="#more">En savoir plus...</a>
+						</p>
+					</div>
+				</div>
+<!-- IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII-->
+				
+			</div>
+			<div class="sidebar">
+				<h2>Nos articles</h2>
+			  <ul>
+			    <li><a href="#La-physique-du-point">La physique du point</a></li>
+			    <hr>
+			    <li><a href="#">Article 2</a></li>
+			    <hr>
+			    <li><a href="#">Article 3</a></li>
+			    <hr>
+			    <li><a href="#">Article 4</a></li>
+			    <hr>
+			  </ul>
+			</div>
+
+
+
+		</div>
+	</section>
+
+	<div id="footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SkyHub - pôle Trajetoire</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="article.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script>
+	  $(function(){
+  		$("#footer").load("../footer.html");
+  		$("#navbar").load("../navbar.html");
+	  });
+	</script>
+	<style type="text/css">
+		nav {
+			position: absolute;
+		}
+		nav.sticky {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="navbar"></div>
+
+	<section class="home black" id="home">
+			<h1>Qu'est ce que l'atmosphère ?</h1>
+	</section>
+
+	<div class="wrapp">
+		<section class="section">
+			<div class="references">
+				<i class="fa fa-user-circle-o"></i> Nicolas Merouze
+				<span class="separator"> &#183; </span>
+				<i class="fa fa-clock-o" aria-hidden="true"></i> 16 mai 2023
+			</div>
+			<div class="titre">La limite de l'atmosphère</div>
+			<p>Mesurer l’épaisseur de notre atmosphère est complexe, car plus nous montons en altitude et moins nous avons air, alors où est la limite de notre belle atmosphère.<br>
+			<ul>
+				<li class="list">
+					Certains scientifiques disent qu’elle se situe à 31 km : seuil en dessous duquel se trouve 99 % de la masse de l'atmosphère 
+				</li>
+				<li class="list">
+					Selon la Fédération d’aéronautique internationale, la limite entre l’atmosphère et l’espace se situe à 100km, à La ligne de KARMAN, à cette altitude il y a si peu de particules d’air que voler à bord d’un avion est impossible, vous le verrez dans une prochaine vidéo.
+				</li>
+				<li class="list">
+					On pourrait aussi mettre cette limite à 120 km qui marque la limite où les effets atmosphériques deviennent notables durant la rentrée atmosphérique de tout objet solide
+				</li>
+			</ul>
+			<p>En réalité il n'y a pas de limite précise entre l'atmosphère et l'espace, car elle devient de plus en plus diffuse avant de s’évanouir dans l'espace de manière continue. Ainsi, la concentration d’air diminue au fil de l’altitude jusqu’à correspondre à la concentration d’air dans l’espace, car oui, il n’y pas de réel vide dans l’espace.</p>
+			<a href="https://dailygeekshow.com/limite-terre-espace/"><img src="img/Image4.png"></a>
+		</section>
+
+		<section class="section">
+			<div class="titre">Pourquoi l'air ne s'échappe pas dans l'espace ?</div>
+			<p>Comme tout corps qui a une masse, l'air subit une force dénommée l’effet de l'attraction et ici l’attraction terrestre, cette force va contraindre l’air à rester proche de la terre. </p>
+			<div class="titre">L’atmosphère est vitale</div>
+			<p>Sans elle, il n’y aurait pas de vie sur Terre : en filtrant le rayonnement ultra-violet solaire nocif pour le vivant (provoquant des mutations dans les gènes, donc ne bronzer pas trop.<br>
+			Mais l’effet le plus important de notre atmosphère est <b>l’effet de serre</b>.</p>
+			<ul>
+				<li class="list">Le soleil émet de l'énergie solaire sous forme de <b>rayonnements</b>.</li>
+				<li class="list">Les rayons émis par le soleil traversent l'espace et l'atmosphère de la terre et réchauffent ainsi <b>naturellement les sols et les océans</b>.</li>
+				<li class="list">La surface de la Terre <b>absorbe naturellement 70% des rayons du soleil</b> tandis que le reste est <b>naturellement renvoyé vers l’espace</b> sous l’effet de la <b>réverbération</b>.</li>
+				<li class="list">Le rayonnement solaire absorbé est alors transformé en <b>rayonnement infrarouge</b> et est restitué dans l’atmosphère.</li>
+				<li class="list">Une partie de ce rayonnement infrarouge est alors à son tour renvoyée vers l’espace tandis que <b>l’autre partie reste emprisonnée dans l'atmosphère</b> par les gaz à effet de serre.</li>
+			</ul>
+			<p>Autrement dit, l’atmosphère permet de réduire l’écart de température entre le jour et la nuit, facilitant le développement du vivant. Par exemple sur la Lune, là où l’atmosphère est très fine, l’effet de serre n’est pas très présent et on se retrouve avec 120 degrés le jour et environ -200 la nuit.</p>
+			<a href="https://www.environnement.gouv.qc.ca/jeunesse/sais_tu_que/2020/2003-effet-serre-12-15.htm"><img src="img/Image5.png"></a>
+		</section>
+
+		<section class="section">
+			<div class="titre">Différentes couches et températures de l’atmosphère</div>
+			<ul>
+				<li class="list">Troposphère (0 à 11km) : dans cette couche la température décroit de 6,5 °C tous les 1 000 mètres.</li>
+				<li class="list">Stratosphère (11 à 50 km) : dans cette couche température est d’abord constante à -56,5°C jusqu’à 20 km puis commence à croitre jusqu’à atteindre 0 degré à 50 km. C’est dans cette couche que se trouve la fabuleuse couche d’ozone qui nous protège des UV. L'ozone (O<sub>3</sub>) de la stratosphère terrestre est créé par les ultraviolets frappant les molécules de dioxygène (O<sub>2</sub>), les séparant en deux atomes distincts ; ce dernier se combine ensuite avec une molécule de dioxygène (O<sub>2</sub>) pour former l'ozone (O<sub>3</sub>).</li>
+				<li class="list">Mésosphère (50 à 80km), dans cette couche la température décroit jusqu’à -80 degré à 80 km d’altitude.</li>
+				<li class="list">Thermosphère où la température va croitre avec l’altitude, et peut atteindre 100 degrés à environ 350 – 800km (dépend de l’activité solaire).</li>
+				<li class="list">Exosphère qui va jusqu’à 55 000 km, c’est une région isotherme où la température atteint des valeurs comprises entre 300°C et 1600°C.</li>
+			</ul>
+			<a href="https://sciences-rhone.enseigne.ac-lyon.fr/spip/spip.php?article122"><img src="img/Image6.png"></a>
+			<p>Les valeurs données pour les hauteurs des couches sont des estimations. Par exemple la tropopause (la limite de la troposphère) est plus haute à l’équateur à environ 18km, à l’inverse elle se situe a seulement 8km aux pôles. Cela s’explique par la force centrifuge due à la rotation de la Terre.</p>
+			<img src="img/Image7.png">
+			<p>On constate que les avions, volant aux alentours des 10 km d’altitude, doivent donc se protéger de ces températures glaciales. Tout comme les fusées qui doivent tout autant se protéger du froid comme du chaud car elle va traverser les différentes couches. A l’instar des fusées, les satellites, doivent se protéger des températures extrêmes de l’espace.</p>
+		</section>
+
+		
+	</div>
+
+	<div id="footer"></div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+	var x = [0, .256, .513, .769, 1.026, 1.282, 1.539, 1.795, 2.051, 2.308, 2.564, 2.821, 3.077, 3.334, 3.59];
+	var y = [896.2, 851.8, 808.9, 767.4, 727.3, 688.7, 651.5, 615.8, 579.9, 544.6, 501.4, 450.4, 323.8, 139.0, 3.5];
+async function createChart_SingleAxis(canvasID) {
+  const ctx = document.getElementById("Chart_Poussee").getContext('2d');
+  var data = {
+  	labels: x,
+  	datasets: [{
+  		label: 'Poussée (N)',
+  		data: y,
+  		fill: true,
+  		borderColor: 'rgb(75, 192, 192',
+  		tension: .2,
+  	}]
+  }
+
+  var options = {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      plugins: {
+        legend: {
+          title: {
+            display: true,
+            text: 'Poussée du moteur en fonction du temps.'
+          }
+        }
+      },
+      elements: {
+        point: {
+          radius: 6
+        }
+      }
+    }
+  var config = {
+    type: 'line',
+    data: data,
+    options: options
+  }
+
+  const Chart_Poussee = new Chart(ctx, config);
+}
+
+createChart_SingleAxis();
+</script>

@@ -149,7 +149,7 @@ nav .menu li {
 }
 nav .menu li a {
 	color: #fff;
-	font-size: 2.7vh;
+	font-size: 25px;
 	font-weight: 500;
 	transition: all .2s ease;
 }
@@ -158,7 +158,7 @@ nav.sticky .menu {
 	transition: all .3s ease-out;
 }
 nav.sticky .menu li a {
-	font-size: 4.4vh;
+	font-size: 25px;
 }
 nav .menu li a:hover {
 	color: lightskyblue;
