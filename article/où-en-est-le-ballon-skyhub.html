@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SkyHub - pôle Trajetoire</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="article.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script>
+	  $(function(){
+  		$("#footer").load("../footer.html");
+  		$("#navbar").load("../navbar.html");
+	  });
+	</script>
+	<style type="text/css">
+		nav {
+			position: absolute;
+		}
+		nav.sticky {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="navbar"></div>
+
+	<section class="home black" id="home">
+			<h1>Où en est le lancement du ballon Skyhub ?</h1>
+	</section>
+
+	<div class="wrapp">
+
+		<section class="section">
+			<div class="references">
+				<i class="fa fa-user-circle-o"></i> Vincent Garcia
+				<br>
+				<i class="fa fa-clock-o" aria-hidden="true"></i> 17 mai 2023
+			</div>
+			
+			<div class="titre">I. Composition de notre ballon sonde</div>
+			<p>Nous avons prévu de lancer un ballon-sonde comprenant un ballon d'hélium de 2,1 mètres de diamètre et un parachute de 1,2 mètre de diamètre. Divers instruments tels qu'un thermomètre, un altimètre et un baromètre nous permettront de recueillir des données sur les caractéristiques de l'atmosphère durant le vol. Nous utiliserons également un capteur UV pour effectuer des mesures complémentaires. Grâce à une caméra embarquée, nous pourrons capturer des images, tandis qu'un traceur GPS nous aidera à localiser rapidement le ballon-sonde après son retour sur terre. Tous ces relevés nous permettront ensuite de compléter cette page avec des graphiques comme l’évolution de la pression et de la température avec l’altitude ou un timelapse du vol. Ainsi on pourra comparer avec la théorie et les travaux des autres pôles nos observations pratiques.</p>
+		</section>
+
+		<section class="section">
+			<div class="titre">II. Comment construire son propre ballon sonde ?</div>
+			<p>La fabrication d’un ballon sonde implique plusieurs aspects. Les démarches administratives afin d’obtenir les autorisations pour le faire voler, la sélection des composants et la programmation afin de l’automatiser.</p>
+			<p>Dans notre cas, nous avons contacté l’association Planète Sciences qui nous aidera à obtenir toutes les autorisations.</p>
+			<p>Pour choisir les composants, nous avons d’abord déterminé quelles mesures nous souhaitions réaliser et avons chercher les composants qui remplissaient ces tâches, tout en ayant à l’esprit la restriction de poids et la résistance à basse température. En effet, plus on s’élève dans l’atmosphère, plus la température diminue. Nous avons décidé d’intégrer dans la nacelle les capteurs suivants :</p>
+			<ul>
+				<li class="list">Un thermomètre pour mesurer l’évolution de la température atmosphérique.</li>
+				<li class="list">Un altimètre pour avoir l’évolution de l’altitude pendant le vol et obtenir notamment l’altitude maximale atteinte</li>
+				<li class="list">Un baromètre pour étudier l’évolution de la pression atmosphérique</li>
+				<li class="list">Un capteur UV pour mesurer l’intensité des rayonnements ultraviolets en fonction de l’altitude</li>
+			</ul>
+
+			<p>Pour la programmation, nous avons opter pour la dépendance d’une carte Arduino et l’utilisation du langage Arduino pour faire fonctionner tous les composants interconnectés.</p>
+		</section>
+
+	</div>
+
+	<div id="footer"></div>
+</body>
+
+</html>
+
