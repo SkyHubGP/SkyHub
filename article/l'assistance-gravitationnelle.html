@@ -45,22 +45,24 @@
 			<p>Dans cet article, nous allons parler du principe de l’assistance gravitationnelle qui consiste à utiliser volontairement l’attraction d’un corps céleste (planète, lune...) pour augmenter la vitesse d’un engin spatial dans l’espace.
 			La sonde Voyager 2 a notamment utilisé ce principe passant à proximité de la planète Jupiter pour continuer son chemin en ayant gagné de la vitesse. Elle a effectué la même manœuvre de nouveau au-dessus de Saturne et d’Uranus. Vous pouvez voir ci-dessous la sonde passant à proximité de Jupiter et remarquer qu’un changement de direction et de vitesse apparait.</p>
 		</section>
+
 		<section class="section">
 			<div class="titre">Simulation physique</div>
 
 			<p>Afin de comprendre dans son intégrité la méthode de l’assistance gravitationnelle, nous devons faire quelques rappels sur les énergies.</p>
 		</section>
+
 		<section class="section">
 			<div class="titre">Rappel sur la chute libre</div>
 			<p>Prenons l’exemple d’un objet en train de tomber sur Terre (sans frottements). Cet objet a :</p>
 			<ul>
-				<li class="list">Une énergie potentielle, qui dépend de sa position (sa hauteur z)</li>
-				<li class="list">Une énergie cinétique reliée, qui dépend de sa vitesse, exprimée</li>
-				<li class="list">Une énergie mécanique qui est définie comme la somme de l’énergie cinétique et l’énergie de position : (équation).<br>Lorsqu’un objet n’est soumis qu’à son poids et ne subit pas de frottement, son énergie mécanique se conserve.</li>
+				<li class="list">Une énergie potentielle, qui dépend de sa position (sa hauteur z) \(E_p=mgz\).</li>
+				<li class="list">Une énergie cinétique reliée, qui dépend de sa vitesse, exprimée \(E_c=\ \frac{1}{2}mv^2\).</li>
+				<li class="list">Une énergie mécanique qui est définie comme la somme de l’énergie cinétique et l’énergie de position : \(E_m=\ E_p+\ E_c\). Lorsqu’un objet n’est soumis qu’à son poids et ne subit pas de frottement, son énergie mécanique se conserve.</li>
 			</ul>
 			<p>Pour illustrer cela, prenons l’exemple de la chute libre. Lorsqu’un objet tombe en chute libre, son énergie de position diminue car il se rapproche du sol et comme l’énergie mécanique doit se conserver, son énergie cinétique augmente obligatoirement.</p>
+			<canvas id="Chart_Poussee"></canvas>
 
-			<img src="">
 			<p>Vous avez maintenant fin prêt pour comprendre le principe d’assistance gravitationnelle !</p>
 		</section>
 
@@ -108,3 +110,74 @@
 
 </html>
 
+<script type="text/javascript">
+
+async function getData() {
+  const response = await fetch('boite_noir.csv');
+  const data = await response.text();
+  const rows = data.split('\n').slice(1);
+  const xLabels = [];
+  const yData1 = [];
+  const yData2 = [];
+  const yData3 = [];
+  rows.forEach(row => {
+    const cols = row.split(';');
+    const x = cols[0];
+    const y1 = cols[4];
+    const y2 = cols[5];
+    const y3 = cols[6];
+
+    xLabels.push(x);
+    yData1.push(y1);
+    yData2.push(y2);
+    yData3.push(y3);
+  });
+  return {xLabels, yData, yData2};
+}
+
+async function createChart_SingleAxis(canvasID) {
+  const ctx = document.getElementById("Chart_Poussee").getContext('2d');
+  var data = {
+  	labels: x,
+  	datasets: [{
+  		label: 'Poussée (N)',
+  		data: y,
+  		fill: true,
+  		borderColor: 'rgb(75, 192, 192',
+  		tension: .2,
+  	}]
+  }
+
+  var options = {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      plugins: {
+        legend: {
+          title: {
+            display: true,
+            text: 'Poussée du moteur en fonction du temps.'
+          }
+        }
+      },
+      elements: {
+        point: {
+          radius: 6
+        }
+      }
+    }
+  var config = {
+    type: 'line',
+    data: data,
+    options: options
+  }
+
+  const Chart_Poussee = new Chart(ctx, config);
+}
+
+createChart_SingleAxis();
+</script>

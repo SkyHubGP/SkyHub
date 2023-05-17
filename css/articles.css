@@ -71,32 +71,7 @@ section .article >*:not(:last-child) {
 .article .box-content {
 	display: flex;
 }
-.learn-more {
-	position: relative;
-  text-decoration: none;
-  color: blueviolet;
-  transition: all .3s ease;
-}
-.learn-more:hover {
-  color: blue;
-}
-.learn-more::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: blue;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.2s ease-out;
-}
 
-.learn-more:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
 
 .sidebar {
   width: 30%;

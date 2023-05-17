@@ -7,6 +7,14 @@
 }
 .section img {
 	max-height: 60vh;
+	padding: 1.5vh 0;
+}
+.section .img-two {
+	display: flex;
+}
+.section .img-two img {
+	padding: 1.5vh .5vw;
+	max-width: 50%;
 }
 
 /*Home START*/
