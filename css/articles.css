@@ -17,10 +17,9 @@ img {
 
 .top {
 	background: url('../img/home-background.png');
-	height: 23vh;
+	height: 20vh;
 	display: flex;
 	font-family: 'Ubuntu', sans-serif;
-	min-height: 10vh;
 	color: #fff;
 }
 
@@ -29,9 +28,9 @@ img {
 }
 .top .top-content .text {
 	text-align: center;
-	font-size: 8vh;
+	font-size: 60px;
 	font-weight: 600;
-	text-shadow: 20px 20px 10px rgba(20, 20, 20, 1);
+	text-shadow: 15px 15px 10px rgba(50, 50, 50, 1);
 	transition: font-size .3s ease-out;
 }
 
@@ -51,7 +50,6 @@ img {
 section .article {
 	transition: margin-bottom .3s ease-out;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 2em;
 	font-weight: 500;
 }
 section .article >*:not(:last-child) {
@@ -59,14 +57,14 @@ section .article >*:not(:last-child) {
 	margin-bottom: 1vh;
 }
 #articles .titre {
-  font-size: 3.2vh;
+  font-size: 29px;
 }
 #articles .content {
 	width: 70%;
 }
 .article .references {
 	text-transform: uppercase;
-	font-size: 1.5vh;
+	font-size: 14px;
 	font-weight: 400;
 	color: #6d6d6d;
 }

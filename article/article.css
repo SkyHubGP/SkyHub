@@ -20,9 +20,9 @@
 	text-align: center;
 }
 .home h1 {
-	font-size: 5.4vh;
+	font-size: 40px;
 	font-weight: 500;
-	margin-top: 30px;
+	margin-top: 3.5vh;
 	transition: font-size .3s ease-out;
 }
 
@@ -39,7 +39,7 @@
 	content: "Qui sommes nous ?";
 }
 .titre {
-	font-size: 3.1vh;
+	font-size: 29px;
 	font-weight: 600;
 	margin-bottom: 8px;
 }

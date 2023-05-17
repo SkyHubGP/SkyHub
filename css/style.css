@@ -67,7 +67,7 @@ section .title::after {
 	transform: translateX(-50%);
 }
 section p , ul, summary{
-	font-size: 1.8vh;
+	font-size: 16px;
 	font-weight: 400;
 	text-align: justify;
 	padding-bottom: 1.5vh;
@@ -129,7 +129,7 @@ nav .wrap {
 }
 nav .logo a {
 	color: #fff;
-	font-size: 4.4vh;
+	font-size: 41px;
 	font-weight: 600;
 	transition: all .2s ease;
 }
@@ -172,7 +172,7 @@ nav input[type=text] {
   float: right;
   border: none;
   padding: .8vh;
-  font-size: 1.8vh;
+  font-size: 17px;
 }
 
 /* FOOTER START */
