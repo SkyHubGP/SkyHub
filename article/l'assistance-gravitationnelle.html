@@ -61,7 +61,7 @@
 				<li class="list">Une énergie mécanique qui est définie comme la somme de l’énergie cinétique et l’énergie de position : \(E_m=\ E_p+\ E_c\). Lorsqu’un objet n’est soumis qu’à son poids et ne subit pas de frottement, son énergie mécanique se conserve.</li>
 			</ul>
 			<p>Pour illustrer cela, prenons l’exemple de la chute libre. Lorsqu’un objet tombe en chute libre, son énergie de position diminue car il se rapproche du sol et comme l’énergie mécanique doit se conserver, son énergie cinétique augmente obligatoirement.</p>
-			<canvas id="Chart_Poussee"></canvas>
+			<canvas id="MyChart"></canvas>
 
 			<p>Vous avez maintenant fin prêt pour comprendre le principe d’assistance gravitationnelle !</p>
 		</section>
@@ -72,21 +72,22 @@
 		</section>
 		<section class="section">
 			<div class="titre">Principe de la manoeuvre</div>
-			<p>Nous allons prendre l’exemple de Voyager 2 au passage de Jupiter pour la suite des explications.
-			Ainsi, dans un premier temps, l’engin spatial s’approche de la planète et rentre dans sa zone d’influence appelée Sphère de Hill.</p>
+			<p>Nous allons prendre l’exemple de Voyager 2 au passage de Jupiter pour la suite des explications.</p>
+			<p>Ainsi, dans un premier temps, l’engin spatial s’approche de la planète et rentre dans sa zone d’influence appelée Sphère de Hill.</p>
 			<details>
-						<summary>Détails...</summary>
-						<div class="detail-content">
-							<hr>
-							<div class="text">
-								<p>La sphère de Hill (ou sphère de Roche) d’un corps A en orbite autour d’un corps B, plus lourd, est la zone d’influence gravitationnelle de ce premier corps A. C’est-à-dire la zone dans laquelle si on introduit un troisième corps C, de masse plus faible que A et B, celui-ci reste en orbite autour du corps A sans être capturé par le corps B
-								Dans l’image ci-dessous sont représentées les sphères de Hill de la Terre et du Soleil. Celle de la Terre s’étend de L1 à L2.</p>
-								<img src="">
-							</div>
-						</div>
-					</details>
+				<summary>Détails...</summary>
+				<div class="detail-content">
+					<hr>
+					<div class="text">
+						<p>La sphère de Hill (ou sphère de Roche) d’un corps A en orbite autour d’un corps B, plus lourd, est la zone d’influence gravitationnelle de ce premier corps A. C’est-à-dire la zone dans laquelle si on introduit un troisième corps C, de masse plus faible que A et B, celui-ci reste en orbite autour du corps A sans être capturé par le corps B
+						Dans l’image ci-dessous sont représentées les sphères de Hill de la Terre et du Soleil. Celle de la Terre s’étend de L1 à L2.</p>
+						<a href="https://fr.wikipedia.org/wiki/Sph%C3%A8re_de_Hill"><img src="img/assistancegrav-Image1.png"></a>
+						
+					</div>
+				</div>
+			</details>
 
-					<p>À mesure que la sonde s’approche, elle voit sa vitesse augmenter : elle « tombe » vers la planète et donc accélère : son énergie cinétique augmente et son énergie potentielle diminue. Ensuite, en s’éloignant de Jupiter, la sonde perd obligatoirement de la vitesse et donc de l’énergie cinétique. Or comme nous l’avons vu plus tôt, l’énergie mécanique se conserve. Mais dans ce cas-là, ce n’est pas l’énergie mécanique de la sonde qui se conserve, mais la somme de l’énergie mécanique de la sonde et de Jupiter. Voyager 2 repart de Jupiter avec plus d’énergie mécanique que lorsqu’elle est arrivée et donc également plus rapidement. En effet comme on a l’égalité (équation) alors si l’une des deux énergies diminue, l’autre augmente.</p>
+			<p>À mesure que la sonde s’approche, elle voit sa vitesse augmenter : elle « tombe » vers la planète et donc accélère : son énergie cinétique augmente et son énergie potentielle diminue. Ensuite, en s’éloignant de Jupiter, la sonde perd obligatoirement de la vitesse et donc de l’énergie cinétique. Or comme nous l’avons vu plus tôt, l’énergie mécanique se conserve. Mais dans ce cas-là, ce n’est pas l’énergie mécanique de la sonde qui se conserve, mais la somme de l’énergie mécanique de la sonde et de Jupiter. Voyager 2 repart de Jupiter avec plus d’énergie mécanique que lorsqu’elle est arrivée et donc également plus rapidement. En effet comme on a l’égalité (équation) alors si l’une des deux énergies diminue, l’autre augmente.</p>
 		</section>
 
 		<section class="section">
@@ -113,39 +114,52 @@
 <script type="text/javascript">
 
 async function getData() {
-  const response = await fetch('boite_noir.csv');
+  const response = await fetch('img/assistancegrav-CSV.csv');
   const data = await response.text();
   const rows = data.split('\n').slice(1);
   const xLabels = [];
   const yData1 = [];
   const yData2 = [];
   const yData3 = [];
+  console.log("ok boomer")
   rows.forEach(row => {
     const cols = row.split(';');
     const x = cols[0];
-    const y1 = cols[4];
-    const y2 = cols[5];
-    const y3 = cols[6];
+    const y1 = cols[3];
+    const y2 = cols[4];
+    const y3 = cols[5];
 
     xLabels.push(x);
     yData1.push(y1);
     yData2.push(y2);
     yData3.push(y3);
   });
-  return {xLabels, yData, yData2};
+  return {xLabels, yData1, yData2, yData3};
 }
 
-async function createChart_SingleAxis(canvasID) {
-  const ctx = document.getElementById("Chart_Poussee").getContext('2d');
+async function createChart_SingleAxis() {
+  const ctx = document.getElementById("MyChart").getContext('2d');
+  const alldata = await getData()
   var data = {
-  	labels: x,
+  	labels: alldata.xLabels,
   	datasets: [{
-  		label: 'Poussée (N)',
-  		data: y,
+  		label: 'Énergie cinétique',
+  		data: alldata.yData1,
   		fill: true,
-  		borderColor: 'rgb(75, 192, 192',
-  		tension: .2,
-  	}]
+  		borderColor: '#CF5CF8',
+  	},
+  	{
+  		label: 'Énergie potentielle de pesanteur',
+  		data: alldata.yData2,
+  		fill: true,
+  		borderColor: '#00A0B0',
+  	},
+  	{
+  		label: 'Énergie mécanique',
+  		data: alldata.yData3,
+  		fill: true,
+  		borderColor: '#F4A261',
+  	}],
   }
 
   var options = {
@@ -160,13 +174,13 @@ async function createChart_SingleAxis(canvasID) {
         legend: {
           title: {
             display: true,
-            text: 'Poussée du moteur en fonction du temps.'
+            text: 'Évolution des énergies durant une chute libre	'
           }
         }
       },
       elements: {
         point: {
-          radius: 6
+          radius: 2
         }
       }
     }
@@ -176,7 +190,7 @@ async function createChart_SingleAxis(canvasID) {
     options: options
   }
 
-  const Chart_Poussee = new Chart(ctx, config);
+  const MyChart = new Chart(ctx, config);
 }
 
 createChart_SingleAxis();

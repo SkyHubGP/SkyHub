@@ -38,7 +38,7 @@
 		<section class="section">
 			<div class="references">
 				<i class="fa fa-user-circle-o"></i> Chloé Meynaud
-				<span class="separator"> &#183; </span>
+				<br>
 				<i class="fa fa-clock-o" aria-hidden="true"></i> 5 mai 2023
 			</div>
 			<div class="titre">Introduction</div>
@@ -51,7 +51,7 @@
 			<div class="titre">Bilan des forces</div>
 			<p>Tout d’abord, quelles sont les forces qui agissent sur la fusée ?</p>
 			<p>Vous trouvez ci-dessous un schéma représentant les forces qui interviennent sur la fusée :</p>
-			<img src="img/Image2.png">
+			<img src="img/physique-Image2.png">
 			<ul>
 				<li class="list">
 					<b>Le poids</b><br>
@@ -76,12 +76,15 @@
 						<div class="detail-content">
 							<hr>
 							<div class="text">
-								<p>
+								<div class="img-two">
+									<img src="img/physique-Image1.png">
+									<p>
 									Les frottements sont laminaires lorsque l'air est n'est pas perturbé par le passage de la fusée. Cela arrive seulement à très faible vitesse. Dans ce cas, la force de frottement est proportionnelle à la vitesse : \(\vec{F_L}=-\lambda\vec{v}\).<br>
 									Les frottements sont turbulents lorsque l'air est très perturbé par le passage de la fusée. Cela arrive presque tout le temps. Dans ce cas, la force de frottement est proportionnelle au carré de la vitesse : \(\vec{F_T}=-\lambda\vec{v}\lVert\vec{v}\rVert\).
 								</p>
-								<p>Le schéma ci-dessous représente le mouvement de l’air au passage de la fusée (représenté par le point rouge). Sur le dessin supérieur l’écoulement est laminaire et sur celui du dessous il est turbulent.</p>
-								<img src="img/Image1.png">
+								</div>
+								
+								<p>Le schéma ci-dessus représente le mouvement de l’air au passage de la fusée (représenté par le point rouge). Sur le dessin supérieur l’écoulement est laminaire et sur celui du dessous il est turbulent.</p>
 							</div>
 						</div>
 					</details>
@@ -243,7 +246,7 @@
 			</ul><br>
 		<p>Pour résoudre ces équations et obtenir les équations temporelles de la trajectoire, on doit faire appel à des méthodes numériques tel que Euler ou Runge Kutta.</p>
 		<p>En prenant pour exemple une petite fusée de 7 kg, 80mm de diamètre et 1m de longueur lancée à 15 m/s à 60° d’inclinaison, on peut comparer la trajectoire de la fusée si elle évoluait dans le vide (sans frottements), ou dans l’air avec des frottements laminaires ou turbulents.</p>
-		<img src="img/Image3.png">
+		<img src="img/physique-Image3.png">
 		<p>Le code de calcul Python qui est à votre disposition utilise ces méthodes numériques afin de tracer les paramètres voulues dans le cas du lancement d’une fusée. Grâce à celui-ci, vous pourrez déterminer la trajectoire d’une fusée avec ou sans frottements ou bien même sa vitesse en fonction du temps. Vous pourrez aussi mettre concrètement en application les principes qui vous sont décris dans cet article et visualiser les trajectoires à l’aide de l’application ci-dessous.</p>
 		</section>
 	</div>
