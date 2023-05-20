@@ -155,8 +155,8 @@ function speedChange(v) {
 function rhoChange(rho) {
 	document.getElementById("rhoLabel").innerHTML = "Rayon initial : " + rho + "km";
 	//reposition satellite
-	sat.style.left = (canvas.width/2 - sat.width/2) + offset + "px";
-	sat.style.top = parseFloat(image_planete.style.top) - parseFloat(rho) + offset + image_planete.height/4 - 5 + "px";
+	sat.style.left = sat_x + (sat.width / 2 + 5 + canvas.width / 2) + "px";
+	sat.style.top = parseFloat(image_planete.style.top) - parseFloat(rho) - sat.height / 2 - 5 + "px";
 
 	rho0 = rho;
 	p = (rho0**2 * v0**2)/(G * M); //paramètre de l'ellipse

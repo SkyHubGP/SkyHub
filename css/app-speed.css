@@ -6,7 +6,7 @@
 canvas {
     background-color: lightblue;
     border: 2px solid darkslateblue;
-    border-radius: 5px;
+    border-radius: 4px;
     width: 800px;
     height: 500px;
 }
