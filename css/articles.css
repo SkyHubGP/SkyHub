@@ -1,9 +1,9 @@
 img {
   display: block;
-  max-width: 100%;
+  max-width: 17vw;
   height: 25vh; /* hauteur fixe */
   object-fit: cover;
-  object-position: left;
+  object-position: center;
   border-radius: 10px;
   vertical-align: middle;
 }

@@ -1,6 +1,7 @@
 
 
 .js-app {
+    overflow: hidden;
 }
 
 canvas {

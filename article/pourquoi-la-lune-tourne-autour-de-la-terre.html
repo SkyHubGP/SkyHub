@@ -82,7 +82,7 @@
 				<div class="app-selectors">
 					<div class="speed">
 						<label for="vit" id="vitesseLabel">Vitesse : 160m/s</label><br>
-						<input type="range" id="vit" name="entreevit" min="0" max="240" value="160" step="1" list="ListeVitesses" onchange="speedChange(this.value)">
+						<input type="range" id="vit" name="entreevit" min="1" max="240" value="160" step="1" list="ListeVitesses" onchange="speedChange(this.value)">
 						<datalist id="ListeVitesses">
 					        <option value="0" label="0°"></option>
 					        <option value="100" label="100m/s"></option>
@@ -101,7 +101,7 @@
 
 					<div class="buttons">
 						<input type="button" id="btn" value="Lancer la simulation">
-						<input type="button" id="reset" value="Réinitialiser la simulation">
+						<input type="button" id="reset" value="Réinitialiser">
 					</div>
 				<script src="../js/app-speed.js"></script>	
 				</div>

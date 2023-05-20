@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SkyHub - Les profils aéronautiques NACA</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="article.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script>
+	  $(function(){
+  		$("#footer").load("../footer.html");
+  		$("#navbar").load("../navbar.html");
+	  });
+	</script>
+	<style type="text/css">
+		nav {
+			position: absolute;
+		}
+		nav.sticky {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="navbar"></div>
+
+	<section class="home black" id="home">
+			<h1>Profils aérodynamiques NACA</h1>
+	</section>
+
+	<div class="wrapp">
+
+		<section class="section">
+			<div class="references">
+				<i class="fa fa-user-circle-o"></i> Arthur Lafferriere
+				<br>
+				<i class="fa fa-clock-o" aria-hidden="true"></i> 20 mai 2023
+			</div>
+
+			<div class="titre">Introduciton</div>
+
+			<p>Pour comprendre comment vole un avion, nous devons nous intéresser aux forces qui rentrent en jeu en vol. Nous retrouvons les quatre forces principales suivantes :</p>
+			<ul>
+				<li class="liste"><b>La poussée.</b> C'est la force qui fait avancer l'avion, elle est produite par les réacteurs.</li>
+				<li class="liste"><b>La traînée.</b> Une force de frottement générée par la friction de l'air sur l'avion. Elle s'oppose à la poussée et retient le mouvement horizontal de l'avion.</li>
+				<li class="liste"><b>Le poids.</b> Cette force est due à l'action du champ de pesanteur terrestre sur l'avion et dépend de sa masse. Elle l'attire vers le sol.</li>
+				<li class="liste"><b>La portance.</b> Cette force s'oppose au poids et permet à l'avion de rester en l'air en le poussant vers le haut.</li>
+			</ul>
+			<img src="img/NACA-Image3.png">
+		</section>
+
+		<section class="section">
+			<div class="titrer">Où et comment est générée la portance ?</div>
+			<p>La portance est générée par les ailes grâce à leur forme spécifique. Celles-ci sont conçues pour créer une différence de pression entre l'intrados et l'extrados de l'aile. L’extrados est la partie supérieure de l’aile et l’intrados sa partie inférieure.</p>
+			<img src="img/NACA-Image4.png">
+
+			<p>Lorsque l’avion roule sur la piste ou lorsqu’il vole dans les airs, il y a une circulation d’air autour de l’aile. On l’appelle flux d’air. On peut le représenter sur un graphique pour le visualiser.</p>
+
+			<img src="img/NACA-Image5.png">
+
+			<p>Pour une aile avec une incidence nul, on remarque que le flux d’air passe au-dessus comme au-dessous de l’aile mais le chemin emprunter sur l’extrados n’est pas équivalent à celui emprunter sur l’intrados.</p>
+
+			<p>On remarque également que les lignes de courant qui représente le flux de l’air sont parallèle les unes par rapport aux autres à l’origine et après avoir passé l’aile. L’aile déforme les lignes de courants, elles se rapprochent où s’éloignent. Ces différences font varier la pression.</p>
+
+			<div class="img-two">
+				<p>On peut le représenter sur un graphique.<br>Sur ce graphique le bleu clair représente une dépression et le rose une suppression.
+					<br><br>
+				On remarque que pour une incidence nul, l’aile produit une dépression sur son extrados principalement. On a donc une différence de pression entre le dessous et le dessus de l’aile qui la soulève vers le haut jusqu’à être à l’équilibre pression. Cette différence de pression est appelée portance.</p>
+				<img src="img/NACA-Image6.png">
+			</div>
+
+			<p>La portance dépend de la vitesse relative de l'air par rapport à l'avion. Plus elle est élevée, plus la portance le sera aussi. Il y a aussi d'autres facteurs tels que l'angle d'incidence de l'avion par exemple.</p>
+
+			<p>Nous pouvons illustrer l’impacte de l’incidence sur la portance crée par l’aile :</p>
+
+			<img src="img/NACA-GIF1.gif">
+
+			<p>Dans cette modélisation, nous pouvons remarquer que l’incidence impacte énormément la différence de pression ente l’extrados et l’intrados. On peut remarquer 2 informations importantes. Tout d’abord, si l’incidence est trop petite, la dépression se situe sur l’intrados, l’avion est poussé vers le sol. Ensuite, plus l’incidence augmente, plus la portance augmente. Cependant cette modélisation ne prend pas en compte les turbulences crée par l’aile lorsque l’air passe autour de l’aile. L’avion ne doit pas avoir un angle d’incidence trop élever sinon la portance commence à diminuer et il peut décrocher. Cette incidence maximale à ne pas dépasser ce situe ente 15° et 20 ° en fonction du type d’appareille.</p>
+
+			<p>Toutes ces modélisations ont été réalisées grâce a la méthode de Joukovski. Pour en apprendre plus sur cette méthode, nous vous invitons à vous renseigner sur <a href="../project/joukovsky.html" class="learn-more">notre projet Joukovski</a>.</p>
+
+		</section>
+
+	</div>
+
+	<div id="footer"></div>
+</body>
+
+</html>
+
