@@ -1,0 +1,63 @@
+
+
+.js-app {
+}
+
+canvas {
+    background-color: lightblue;
+    border: 2px solid darkslateblue;
+    border-radius: 5px;
+    width: 800px;
+    height: 500px;
+}
+
+
+#planete{
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    padding: 0;
+}
+
+#sat{
+    object-fit: cover;
+    width: 30px;
+    height: 65px;
+}
+
+.Selector {
+    margin: auto;
+}
+
+.trace{
+    position: relative;
+    top:-600px;
+    left: 850px;
+    width: 800px;
+}
+
+.erase{
+    position: relative;
+    top:-590px;
+    left: 850px;
+}
+
+datalist {
+    flex-direction: row;
+    justify-content: space-between;
+    writing-mode: horizontal-tb;
+    width: 200px;
+}
+
+option {
+    padding: 0;
+}
+
+input[type="range"] {
+    width: 200px;
+}
+
+label {
+    padding: 2px;
+    padding-right: 5px;
+}

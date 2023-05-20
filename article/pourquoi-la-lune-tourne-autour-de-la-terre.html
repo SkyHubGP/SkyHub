@@ -7,6 +7,7 @@
 
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="article.css">
+	<link rel="stylesheet" type="text/css" href="../css/app-speed.css">
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -68,10 +69,45 @@
 			<div class="titre">Application ludique</div>
 
 			<div class="js-app">
-				<div class="canvas">
-					<img src="../img/app/planete.png">
+				<div class="app-screen">
+					
+					<div id="canvas">
+						<img src="../img/app/planete.png" id="planete">
+						<img src="../img/app/pomme.png" id="sat">
+						<canvas id="Canvas" width="800" height="500"></canvas>
+					</div>
+					
+				</div>
+
+				<div class="app-selectors">
+					<div class="speed">
+						<label for="vit" id="vitesseLabel">Vitesse : 160m/s</label><br>
+						<input type="range" id="vit" name="entreevit" min="0" max="240" value="160" step="1" list="ListeVitesses" onchange="speedChange(this.value)">
+						<datalist id="ListeVitesses">
+					        <option value="0" label="0°"></option>
+					        <option value="100" label="100m/s"></option>
+					        <option value="240" label="240/s"></option>
+					    </datalist>
+					</div>
+
+					<div class="radius">
+						<label for="rho" id="rhoLabel">Rayon initial : 89km</label><br>
+    					<input type="range" id="rho" name="entreerho" min="89" max="240" value="89" step="1" list="ListeRho" onchange="rhoChange(this.value)">
+    					<datalist id="ListeRho">
+					        <option value="89" label="89km"></option>
+					        <option value="240" label="240km"></option>
+					    </datalist>
+					</div>
+
+					<div class="buttons">
+						<input type="button" id="btn" value="Lancer la simulation">
+						<input type="button" id="reset" value="Réinitialiser la simulation">
+					</div>
+					
 				</div>
 			</div>
+
+  			<script src="../js/app-speed.js"></script>
 		</section>
 
 	</div>
