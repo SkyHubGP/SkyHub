@@ -408,3 +408,7 @@ a {
 	}
 	nav .logo a {font-size: 28px}
 }
+
+@media (max-width: 650px) {
+	section p {font-size: 15px}
+}

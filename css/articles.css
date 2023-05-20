@@ -170,3 +170,24 @@ section .article >*:not(:last-child) {
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+@media (max-width: 1100px) {
+  .top .top-content .text {font-size: 45px}
+  img {max-width: 30vw}
+}
+
+@media (max-width: 900px) {
+  .sidebar {display: none}
+  .top {min-height: 5vh;height: 8vh}
+  .top .top-content .text {font-size: 40px}
+  #articles .content {width: 100%}
+  img {max-width: 40vw}
+  #articles .titre {font-size: 22px}
+  .article .references {font-size: 12px}
+}
+
+@media (max-width: 650px) {
+  .article .box-content {display: block;}
+  img {max-width: 90vw;height: 20vh;margin-bottom: .8vh}
+  .top .top-content .text {font-size: 35px}
+}
