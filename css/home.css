@@ -153,6 +153,7 @@
 }
 .project img {
 	width: 90%;
+	object-fit: cover;
 	border-radius: 20px;
 	transition: box-shadow .6s ease;
 }
@@ -275,10 +276,12 @@
 @media (max-width: 1750px) {
 	.home .home-images {width: 50vw; height: 75vh;}
 	.home {height: 75vh;}
+	.project-content .box h2 {font-size: 2.2em}
 }
 @media (max-width: 1550px) {
 	.home .home-images {width: 45vw; height: 60vh;}
 	.home {height: 60vh;}
+	.project-content .box h2 {font-size: 2em;}
 }
 
 @media (max-width: 1465px) {
@@ -399,9 +402,10 @@
 	margin-bottom: 8px;
 	}
 	.home .home-images {width: 40vw}
+	.project .project-content {grid-template-columns: 1fr 1fr; column-gap: 0;}
 }
 @media (max-width: 1024px) {
-	.home .home-images {display: none;}
+	.home .home-images {display: none;height: 0}
 	.home {height: 40vh;}
 }
 @media (max-width: 1000px) {
@@ -411,7 +415,25 @@
 	section .title {
 		margin-bottom: 35px;
 	}
-	.home {height: 30vh;}
+	.home {height: 40vh;min-height: 10vh}
 	.home .home-content {text-align: center;}
 	.home .wrap {margin: auto;}
+}
+
+@media (max-width: 700px) {
+	section {
+		padding: 20px 0;
+	}
+	section .title {
+		margin-bottom: 25px;
+		font-size: 30px;
+	}
+	.home {height: 30vh;}
+	.home .home-content {text-align: center;}
+	.home .wrap {margin-bottom: 2vh;}
+	.home .home-text #text-1 {font-size: 22px}
+	.home .home-text #text-2 {font-size: 45px}
+	.home .home-text #text-3 {font-size: 20px}
+	.project .project-content {grid-template-columns: 1fr}
+	.project .box h2 {padding-bottom: 0px}
 }
