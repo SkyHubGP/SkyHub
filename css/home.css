@@ -26,6 +26,52 @@
 	font-weight: 600;
 	margin-left: -4px;
 	transition: font-size .3s ease-out;
+	background: #CA4246;
+    background-color: #CA4246;
+    background: conic-gradient(
+    lightskyblue 16.666%, 
+    blueviolet 16.666%, 
+    lightskyblue 33.333%, 
+    skyblue 33.333%, 
+    lightskyblue 50%, 
+    lightskyblue 83.333%);
+    background-size: 207%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	animation: rainbow-text-animation-rev 0.6s ease forwards;
+    cursor: pointer;
+}
+.home .home-text #text-2:hover {
+	animation: rainbow-text-animation .45s ease forwards;
+}
+@keyframes rainbow-text-animation {
+  0% {
+    background-size: 207%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+}
+@keyframes rainbow-text-animation-rev {
+  0% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 207%;
+    background-position: 0 0;
+  }
 }
 .home .home-text #text-3 {
 	font-size: 43px;
@@ -40,34 +86,34 @@
 	height: 85vh;
 	background-size: cover;
 	background-repeat: no-repeat;
-	animation: background-scroll 90s linear infinite;
+	animation: background-scroll 60s linear infinite;
 	background-position: center;
 	transition: width .2s, height .6s ease;
 }
 @keyframes background-scroll {
 	0% {
-		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/soufflerie/Image2.jpg');
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../article/img/NACA-GIF1.gif');
 	}
-	15% {
-		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/soufflerie/Image3.jpg');
+	14.3% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../article/img/soufflerie-Image3.png');
 	}
-	30% {
-		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/soufflerie/Image7.jpg');
+	28.6% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../article/img/soufflerie-Image11.png');
 	}
-	45% {
-		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/soufflerie/Image8.jpg');
+	42.9% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../article/img/lune-planete-terre.jpeg');
 	}
-	60% {
-		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/trajectoire/hubble-3d-mars.png');
+	57.2% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../article/img/ballon1-Image3.png');
 	}
-	75% {
-		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/trajectoire/fusee-v_t.png');
+	71.5% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../article/img/soufflerie-Image6.png');
 	}
-	90% {
-		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/trajectoire/orbite-geo.png');
+	85.5% {
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../article/img/assistancegrav-Image2.jpg');
 	}
 	100% {
-		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/ballon/Image5.jpg');
+		background-image: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(255, 255, 255, 0)), url('../img/trajectoire/hubble-3d-terre.png');
 	}
 }
 
@@ -143,6 +189,34 @@
 }
 .project .box:hover h2 {
 	translate: 0 -30%;
+	background-image: linear-gradient(45deg, #111, #62209E, #4A3D97);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-text-simple-animation-rev .3s ease forwards;
+}
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
 }
 .project .content {
 	border-radius: 10px;
@@ -153,12 +227,16 @@
 }
 .project img {
 	width: 90%;
+	height: 30vh;
 	object-fit: cover;
 	border-radius: 20px;
-	transition: box-shadow .6s ease;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+	transition: box-shadow .6s ease, object-position .4s ease-in-out;
 }
 .project .box:hover img {
 	box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+	object-position: right;
+	overflow: hidden;
 }
 
 
