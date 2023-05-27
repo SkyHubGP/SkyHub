@@ -182,7 +182,7 @@ class Roquet:
     
     def update_text(self):
         x = WIDTH - 230
-        FONT = pygame.font.Font('arial.ttf', 20)
+        FONT = pygame.font.SysFont(None, 20)
         # control
         text0 = FONT.render(f'Time : {int(time)} s', True, WHITE)
         text01 = FONT.render(f'Speed : x{SPEED}', True, WHITE)
@@ -292,7 +292,7 @@ class Button:
         self.image = pygame.Surface((width, height))
         self.image.fill(bg)
         
-        FONT = pygame.font.Font('Chillax-Bold.otf', 20)
+        FONT = pygame.font.SysFont(None, 20)
         text_surface = FONT.render(text, True, fg)
         text_rect = text_surface.get_rect(center=self.image.get_rect().center)
         self.image.blit(text_surface, text_rect)
@@ -327,7 +327,7 @@ terre = Planet(x=WIDTH/2, y=HEIGHT/2)
 player = Roquet(x=terre.x, y=terre.y - (terre.radius + 500e3))
 
 #text1 = Text(FONT, 'Thrust', player.thru)
-FONT = pygame.font.Font('Chillax-Bold.otf', 20)
+FONT = pygame.font.SysFont(None, 20)
 
 center = player
 CHOOSE_CENTER = Button(15, HEIGHT - 50, text='Next')

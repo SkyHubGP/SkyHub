@@ -20,7 +20,7 @@ class Roquet(pygame.sprite.Sprite):
     def __init__(self, m_fuel=55, m_craft=30, ISP=800, lenth=100, thickness=5):
         super(Roquet, self).__init__()
         self.x, self.y = WIDTH / (2*SCALE), HEIGHT - 20
-        self.theta_roquet = radians(0)
+        self.theta_roquet = radians(90)
         self.theta_roquet_v = 0
         self.calage_engine = 0
         
@@ -121,7 +121,7 @@ class Roquet(pygame.sprite.Sprite):
     
     def update_text(self):
         x = 1050
-        FONT = pygame.font.Font('arial.ttf', 20)
+        FONT = pygame.font.SysFont(None, 20)
         # control
         text0 = FONT.render(f'Time : {int(time)} s', True, WHITE)
         text1 = FONT.render(f'Thrust : {int(self.thrust)} N', True, WHITE)
@@ -181,7 +181,7 @@ player = Roquet()
 
 
 #text1 = Text(FONT, 'Thrust', player.thru)
-FONT = pygame.font.Font('Chillax-Bold.otf', 20)
+FONT = pygame.font.SysFont(None, 20)
 
 # BUTTONS ---------------------------------------------------------------------
 zoom_in = Button(FONT, 15, HEIGHT - 50, text='Zoom +')
