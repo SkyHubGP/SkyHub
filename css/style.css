@@ -14,11 +14,11 @@ iframe {
 	width: 60%;
 	min-height: 40vh;
 }
-hr {
+.content hr {
 	height: 1px;
-  	border: none;
-  	background-color: #ccc;
-  	margin: 1.4vh 0;
+  border: none;
+  background-color: #ccc;
+  margin: 1.4vh 0;
 }
 h2 {
 	font-size: 2.6vh;
