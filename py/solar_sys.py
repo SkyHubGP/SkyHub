@@ -124,7 +124,7 @@ def main():
     earth = Planet(-1 * Planet.AU, 0, 16, BLUE, 5.974e24)
     earth.y_vel = 29783
     
-    mars = Planet(-1.524 * Planet.AU, 0, 12, RED, 6.39e26)
+    mars = Planet(-1.524 * Planet.AU, 0, 12, RED, 6.39e23)
     mars.y_vel = 24077
     
     jupiter = Planet(-5.2 * Planet.AU, 0, 20, RED, 1.898e27)
