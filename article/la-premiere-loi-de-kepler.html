@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SkyHub - La première loi de Kepler</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="article.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script>
+	  $(function(){
+  		$("#footer").load("../footer.html");
+  		$("#navbar").load("../navbar.html");
+	  });
+	</script>
+	<style type="text/css">
+		nav {
+			position: absolute;
+		}
+		nav.sticky {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="navbar"></div>
+
+	<section class="home black" id="home">
+			<h1>La première loi de Kepler</h1>
+	</section>
+
+	<div class="wrapp">
+
+		<section class="section">
+			<div class="references">
+				<i class="fa fa-user-circle-o"></i> Gregory Hubert
+				<br>
+				<i class="fa fa-clock-o" aria-hidden="true"></i> 28 mai 2023
+			</div>
+
+			<div class="titre">Qui était Kepler ?</div>
+			<div class="img-two">
+				<div>
+					<p>Johannes Kepler était un astronome allemand. Il est né en 1571 et est mort en 1630.  A partir des observations de l’astronome danois Tycho Brahe, il est parvenu à donner une description mathématique précise des orbites des planètes du système solaire. A l’époque de Kepler, on pensait que le Soleil tournait autour de la Terre (<i>géocentrisme</i><sup>1</sup>). Il a été l’un des grands savants qui a contribué à la défense de <i>l’héliocentrisme</i><sup>2</sup> (la Terre qui tourne autour du Soleil).</p>
+					<p><br>
+						<sup>1</sup> : le <i>géocentrisme</i> considère la Terre comme le centre de l'univers. Cette théorie était basée sur des croyances religieuses et philosophiques.
+						<br><br>
+						<sup>2</sup> : l'<i>héliocentrisme</i> postule que le Soleil est le centre du <i>système solaire</i> et que les planètes, y compris la Terre, orbite autour de lui. Aujourd'hui, l'héliocentrisme est largement accepté et soutenu par des observations astronomiques et des connaissances scientifiques approfondies.
+					</p>
+				</div>
+				
+				<img src="img/kepler-Image2.png">
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="titre">Loi des elllipses</div>
+			<p>L’énoncé (en français) de la première loi de Kepler est le suivant : <br>
+				<i>« Les planètes du système solaire décrivent des trajectoires elliptiques dont le Soleil occupe l'un des foyers. »</i></p>
+
+			<p>Avant Kepler, Copernic qui défendait la théorie de l’héliocentrisme, pensait que les trajectoires des planètes était des cercles. Kepler, grâce aux mesures précises auxquelles il a eu accès, a montré qu’il s’agissait plutôt d’ellipses (des <i>« ovales »</i> dans le langage courant).</p>
+
+			<details>
+				<summary>Qu'est ce que le foyer d'une ellipse ?</summary>
+				<div class="detail-content">
+					<hr>
+					<div class="text">
+						<p>Attention, il ne faut pas confondre le centre d’une ellipse, et les foyers d’une ellipse. Le centre de l’ellipse (le point \(C\)) est le milieu du grand axe et du petit axe représentées en pointillés noirs. Les foyers sont les deux points qui vérifient la propriété géométrique suivante. En prenant n’importe quel point de l’ellipse et en sommant les distances entre ce point et les deux foyers on obtient toujours la même longueur. Autrement dit, la longueur des lignes en pointillés bleue et verte sont les mêmes.</p>
+						<img src="img/kepler-Image1.png">
+						<p>Cette loi n’est pas seulement valable pour les planètes mais aussi pour n’importe quel corps orbitant autour du Soleil (comme la comète de <i><a href="https://fr.wikipedia.org/wiki/Com%C3%A8te_de_Halley" class="learn-more" target="_blank">Halley</a></i>). Plus généralement, elle est valable pour n’importe quel corps orbitant autour d’un corps bien plus massif que lui (satellites autour de la Terre par exemple).</p>
+						
+					</div>
+				</div>
+			</details>
+
+		</section>
+
+		<section class="section">
+			<div class="titre">Formulation mathématique</div>
+			<p>L’expression mathématique décrivant les trajectoires des planètes autour du Soleil est la suivante :
+			$$\rho\left(\theta\right)=\frac{p}{1+e\cos{\theta}}$$
+			\(\rho\) est la distance entre le Soleil et la planète et \(\theta\) l’angle représenté sur le schéma ci-dessous. On les appelle coordonnées polaires.</p>
+			<img src="img/kepler-Image3.png">
+			<p>\(p\) est le <i>paramètre</i> de l’ellipse (c’est lui qui va déterminer la taille de l’ellipse) et \(e\) est son <i>excentricité</i> (c’est lui qui va déterminer la forme de l’ellipse).</p>
+
+			<p>Pour mieux comprendre ce que sont p et e, vous pouvez vous amuser à changer leurs valeurs sur l’application suivante et observer ce qui change sur la trajectoire.</p>
+		</section>
+
+		<section class="section">
+			<div class="titre">Simulation de la loi des ellipes</div>
+		</section>
+
+		<section class="section">
+			<div class="titre">Différentes formes de trajectoire</div>
+
+			<p>En fonction de la valeur de l’excentricité, la trajectoire ne sera pas la même.</p>
+			<ul>
+				<li class="list">
+					\(e=0\)<br>
+					<p>Si l’excentricité est nulle, la trajectoire est un cercle. Dans ce cas particulier, les foyers et le centre sont confondus.</p>
+					<img src="img/kepler-Image4.png">
+				</li>
+
+				<li class="list">
+					\(0 < e < 1\)<br>
+					<p>Si l’excentricité est comprise entre 0 et 1, la trajectoire est une ellipse. L’excentricité de la Terre est 0,017 (proche d’un cercle), celle de Mercure est 0,21 et celle de la comète de <a href="https://fr.wikipedia.org/wiki/Com%C3%A8te_de_Halley" class="learn-more" target="_blank">Halley</a> est 0,97 (ellipse très aplatie)</p>
+					<img src="img/kepler-Image5.png">
+				</li>
+
+				<li class="list">
+					\(e=1\)<br>
+					<p>La trajectoire est une parabole. A partir de cette valeur d’excentricité, le corps dont on étudie la trajectoire ne reviendra plus. Il ne tourne pas en rond (enfin… en ellipse).</p>
+					<img src="img/kepler-Image6.png">
+				</li>
+
+				<li class="list">
+					\(e>1\)<br>
+					<p>La trajectoire est une hyperbole. C’est généralement ce type de trajectoire qu’on a lors de <a class="learn-more" href="L'assistance-gravitationnelle.html">l’assistance gravitationnelle</a>.</p>
+					<img src="img/kepler-Image7.png">
+				</li>
+			</ul>
+		</section>
+
+		<section class="section">
+			<div class="titre">Force d’attraction gravitationnelle</div>
+
+			<p>La première loi de Kepler est fondamentale. Elle a permis à Isaac Newton d’établir la théorie de la gravité, et plus particulièrement de trouver l’expression de la force d’attraction gravitationnelle :
+				$$F=G\frac{M_S\cdot m}{d^2}$$<br>
+			\(G\) est la constante gravitationnelle, \(M_S\) la masse du Soleil, \(m\) la masse du corps étudié et \(d\) la distance qui sépare ce corps avec le Soleil.</p>
+
+			<p>Plus précisément, Newton a cherché la puissance qu’il fallait mettre sur la distance de manière à trouver lui aussi des ellipses, c’est-à-dire pour être en accord avec la loi empirique de Kepler.</p>
+		</section>
+
+	</div>
+
+	<div id="footer"></div>
+</body>
+
+</html>
+

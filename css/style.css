@@ -94,6 +94,9 @@ section p a {
 	text-decoration: underline;
 	color: inherit;
 }
+.definitions {
+	text-align: end;
+}
 section .color {
 	color: #7FC0EB;
 	font-weight: 500;
