@@ -8,6 +8,7 @@
 .section img {
 	max-height: 60vh;
 	padding: 1.5vh 0;
+	max-width: 100%;
 }
 .section .img-two {
 	display: flex;

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SkyHub - Mini-fusée expérimentale</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="article.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script>
+	  $(function(){
+  		$("#footer").load("../footer.html");
+  		$("#navbar").load("../navbar.html");
+	  });
+	</script>
+	<style type="text/css">
+		nav {
+			position: absolute;
+		}
+		nav.sticky {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="navbar"></div>
+
+	<section class="home black" id="home">
+			<h1>Mini-fusée expérimentale, un projet grandiose</h1>
+	</section>
+
+	<div class="wrapp">
+
+		<section class="section">
+			<div class="references">
+				<i class="fa fa-user-circle-o"></i> Félix Mercier
+				<span class="separator"> &#183; </span>Emrys Villet
+				<span class="separator"> &#183; </span>Mathis Enguehard
+				<span class="separator"> &#183; </span>Diego Caret
+				<span class="separator"> &#183; </span>Maxime Kuentz
+				<span class="separator"> &#183; </span>Goan Sivanandame
+				<br>
+				<i class="fa fa-clock-o" aria-hidden="true"></i> 2022 - 2023
+			</div>
+
+			<div class="titre">Présentation du projet</div>
+
+			<p>	Notre rôle dans le grand projet est de construire une fusée expérimentale et de la lancer. L’appellation fusée expérimentale signifie que nous devons y placer divers capteurs embarqués à titre d’expérience. Ces capteurs (accéléromètre, baromètre, …) ont pour but de nous permettre d’observer la trajectoire suivie par notre fusée.</p>
+
+			<p>Il existe plusieurs types de fusées expérimentales. Nous sommes partis sur la mini-fusée car elle présente l’avantage d’être réalisable sur une période d’un an pour une équipe qui n’a encore jamais construit de fusée ; ce qui est notre cas. Une fois le type de fusée choisi nous nous sommes renseignés pour savoir comment se déroulait ce genre de projet, comment nous pouvons la lancer, etc.</p>
+
+			<p>Il faut savoir qu’il est nécessaire de passer par l’association Planète Sciences pour construire et lancer une fusée. C’est de plus sur leur site que nous avons eu accès au cahier des charges de la mini-fusée, qui regroupe toutes les règles et caractéristiques qui sont nécessaires pour que notre fusée soit homologuée ; le but étant d’éviter tout incident au lancement. Nous ne préciserons pas tout le cahier des charges auquel nous devons obéir (celui-ci est accessible sur le site de planète science), mais nous préciserons lorsque cela est nécessaire, les normes qui nous sont imposés (notamment pour le dimensionnement).</p>
+
+			<p>Il est aussi nécessaire de prendre contact avec Planète Sciences pour qu’ils puissent nous encadrer, nous aider si besoin et nous enregistrer pour prendre part à une de leurs campagnes de lancement. En effet, à partir du gabarit de la mini-fusée il est obligatoire, si l’on veut lancer notre fusée, de le faire au sein d’une campagne régionale ou nationale dédiée, à laquelle nous somme inscrits grâce à Planète Sciences.</p>
+			
+		</section>
+
+		<section class="section">
+			<div class="titre">Choix de la mini fusée pour notre projet : une solution classique et efficace</div>
+
+			<p>Nous avons prévu de loger le parachute dans le corps de la fusée et d'utiliser une détonation générée à la fin de la combustion du propulseur pour éjecter l'ogive et le parachute. Ce système est très classique et répandu dans le monde des mini-fusée. Ce qui est moins répandu c’est que nous avons prévu de retenir l'ogive au corps de la fusée à l'aide d'une corde, tandis que nos capteurs seront logés dans l'ogive.</p>
+
+			<img src="img/fusee-Image1.png">
+		</section>
+
+		<section class="section">
+			<div class="titre">Modélisation de vol</div>
+
+			<p>Pour concevoir une mini-fusée, le choix des matériaux est primordial pour garantir la performance de l'engin. Pour nous assurer de la pertinence de nos choix et de leur adéquation avec nos objectifs, nous avons fait appel à des outils de modélisation tels que le logiciel OpenRocket et Stabtraj (un document Excel fourni par Planète Science). Grâce à ces outils, nous avons pu sélectionner les matériaux les plus appropriés en termes de performance, de coût et d'accessibilité, tout en calculant le poids et la taille de la fusée.</p>
+			<img src="img/fusee-Image2.png">
+			<div class="img-two">
+				<img src="img/fusee-Image3.png">
+				<img src="img/fusee-Image4.png">
+			</div>
+			<img src="img/fusee-Image5.png">
+
+			<p>Nous avons donc estimé que notre fusée pèsera 700g et mesurera 700mm.</p>
+			<p>Nous avons ensuite établi la liste précise de matériaux :</p>
+
+			<ul>
+				<li class="list">Parachute en toile de 45cm de rayon (suffisant maintenir un taux de descente compris entre 5 et 15 m/s)</li>
+				<li class="list">Corps en PVC de 580mm de longueur et 50mm de diamètre</li>
+				<li class="list">Coiffe de type “ogivale (pointue)” de 120mm et bague moteur imprimés en 3D (pour ses performances et sa facilité de conception)</li>
+				<li class="list">Planque en plastique pour les ailerons (facilitée de conception est d’usinage)</li>
+				<li class="list">Des composants électroniques (fournis par planète science) : capteur d’accélération, batterie et carte Arduino</li>
+			</ul>
+		</section>
+
+		<section class="section">
+			<div class="titre">Conception de la mini-fusée</div>
+
+			<p>La conception de la mini-fusée se découpe en plusieurs étapes majeures. La principale est le choix et l'incorporation du moteur, dont dépendra le reste de l’allure du corps de la fusée.<br> 
+			L’autre défi majeur se situe au niveau de la coiffe. Le cône devra être détachable pour pouvoir accéder facilement au module expérimental contenant les différents capteurs embarqués. En effet, le jour de lancement, nous devrons configurer ces différents capteurs avant de lancer la fusée. De cette problématique est née l’idée d’un cône avec clips permettant de l’enlever et de le remettre à tout moment du projet.</p>
+
+			<p>Dans le corps de la fusée, trois éléments majeurs sont présents :</p>
+			<ul>
+				<li class="list">Le bloc expérimental qui contiendra la partie électronique</li>
+				<li class="list">Le parachute</li>
+				<li class="list">Le moteur fournit par le CNES</li>
+			</ul>
+
+			<p>Pour la partie électronique situé dans notre bloc expérimental, notre carte Arduino sera incrémentée d’un code numérique permettant grâce au capteur d’accélération et à partir des conditions initiales (position, vitesse et accélération à l’origine) de récolter les données du vol.</p>
+
+			<p>Pour le système de récupération : nous avons un parachute de 45 cm de rayon pour avoir une vitesse de descente de 6,1 m/s. Il sera attaché à la fusée à l’aide de suspentes.<br>
+			Pour la structure : nous avons toutes les dimensions de la fusée, avec une hauteur de 700 mm, de diamètre 50 mm et un poids total estimé à 0.6 kg. La fusée devrait atteindre une apogée à 223 m en 6.8 s avec une durée de vol total de 46 s.</p>
+
+			<p>Afin de déterminer les caractéristiques de la fusée nous nous sommes aidés d’un fichier Excel nommé « Stabtraj » fournis par Planète Science. Cela nous a permis de trouver la masse de la fusée, sa taille, son diamètre et à partir de ces données Stabtjraj nous a donné la vitesse de la fusée son apogée, la taille du parachute qu’il nous fallait ainsi que la trajectoire du vol effectué.</p>
+
+		</section>
+
+		<section class="section">
+			<div class="titre">Construction</div>
+
+			<p>Nous allons débuter la construction par les ailerons. Pour cela nous dessinons sur CATIA l’esquisse de ceux-ci avec les dimensions que nous donne Stabtjraj. Sabtraj nous donne uniquement les longueurs adéquates des ailerons, il nous faut rajouter le système d’encoche qui permettra de les attacher entre eux et de les fixer à la fusée. L’encoche en bas servira d’emplacement pour la bague moteur.</p>
+
+			<img src="img/fusee-Image6.png">
+			<p style="text-decoration: underline;">Esquisse Catia des ailerons avec la cotation des longueurs</p>
+
+			<div class="img-two">
+				<img src="img/fusee-Image7.png">
+				<img src="img/fusee-Image8.png">
+			</div>
+
+		</section>
+
+		<section class="section">
+			<div class="titre">Calque des deux ailerons</div>
+
+			<p>Nous avons ensuite converti l’esquisse sur Catia en deux calques, un avec l’encoche en haut et l’autre en bas pour pouvoir les emboiter. Ces calques peuvent être importer sur le logiciel de la découpeuse laser.</p>
+
+			<img src="img/fusee-Image9.png">
+			<div class="img-two">
+				<img src="img/fusee-Image10.png">
+				<img src="img/fusee-Image11.png">
+			</div>
+
+			<p>Ensuite, nous avons besoin de programmer en Python … qui contiendra toutes les informations de vol de la fusée après son lancement. Une petite boîte en … a déjà été construite au préalable pour …. L’intérieur de la coiffe contient un trou taraudé où la boîte rentre parfaitement.</p>
+
+			<p>Nous avons aussi fait le choix d’acheter notre parachute. Ce parachute a un rayon de 45 cm capable de supporter une charge utile située entre 400-600g.</p>
+
+		</section>
+
+		<section class="section">
+			<details>
+				<summary><div class="titre">Informations complémentaires</div></summary>
+				<div class="detail-content">
+					<hr>
+					<div class="text">
+						<p>3 types de vol : vol surstable, vol stable et vol instable.</p>
+
+						<p><b>Vol surstable</b> : trop de poussée aérodynamique, la fusée n’est pas capable de retourner sur sa position d’équilibre car elle réagit trop facilement aux perturbations, risque élevé que la fusée change de la direction prévue dû à des oscillations de sa trajectoire. Causes : ailerons trop grands, marge statique trop importante. Solutions : réduire la taille des ailerons, la position des ailerons (vers le haut), et abaisser le centre de masse.</p>
+
+						<p><b>Vol stable</b> : la fusée est en position d’équilibre, sa poussée aérodynamique est suffisamment élevée pour contrer les perturbations extérieures à intensité égale. Ainsi, la trajectoire prévue ne change pas.</p>
+
+						<p><b>Vol instable</b> : la poussée aérodynamique est trop faible pour compenser les perturbations, perte de la trajectoire prévue, donc cela devient dangereux car imprévisible. Causes : ailerons trop petits, marge statique trop faible. Solutions : agrandir ou abaisser les ailerons, monter le centre de masse.</p>
+
+						<p>3 phases de vol : propulsée, balistique, et descente.</p>
+
+						<p><b>Phase propulsée</b> : à partir du moment où la poudre est allumée jusqu’à la fin de la combustion. L’accélération reste quasiment constante et diminue lorsque le vent relatif devient assez conséquent. Ainsi, la vitesse augmente de plus en plus lentement jusqu’à atteindre sa valeur maximale à la fin de la propulsion. Due à la combustion de carburant/matière, la fusée perd du poids.</p>
+
+						<p><b>Phase balistique</b> : entre la fin de la combustion et la hauteur maximale, forte décélération au début, fusée soumise uniquement au poids et résistance de l’air. La hauteur est maximale lorsque la vitesse verticale est nulle.</p>
+
+						<p><b>Phase descente</b> : une fois la hauteur maximale atteinte, la fusée redescend et plonge. D’où l’importance de l’ouverture d’un parachute durant cette phase pour préserver la fusée d’un accident ou atterrissage trop brutal. Au début, la vitesse augmente rapidement, puis avec l’ouverture du parachute, la trainée et le poids se compensent progressivement. Ainsi, ces deux forces deviennent égales opposées. Alors, l’accélération est nulle et la vitesse devient constance. Celle-ci est nommée vitesse de chute stabilisée.</p>
+
+						<p>3 forces : poids, force aérodynamique, et poussée moteur.</p>
+
+						<p><b>Poids</b> : le poids s’exerce sur le centre de gravité de la fusée et est dirigé vers le bas (centre Terre).<br>
+						Cas simplifié : \({\vec{P}}=m\vec{g}\)</p>
+
+						<p><b>Résistance air (Force aérodynamique)</b> : Opposée au mouvement de la fusée donc à la vitesse de la fusée. Elle s’applique en un point appeler le centre de poussée aérodynamique (CPA), souvent près des ailerons. La force de frottement d’air dépend du vent relatif, c’est-à-dire de la somme de la vitesse fusée et de la vitesse du vent. C’est donc ce vent qui influencera la trajectoire de la fusée.<br>
+						Son expression est donnée par : \(\vec{R}=\vec{R_N}+\vec{R_A}\) avec \(R_N\) la composante normale (portance) et \(R_A\) la composante axiale (traînée).</p>
+
+						<p><b>Poussée (moteur)</b> : la poussée générée par le moteur suit l’axe longitudinal de la fusée, allant du moteur à l’ogive. Elle est la force axiale appliquée sur la plaque de poussée. On la note \(\vec{F_p}=\ q_m\times\vec{v_e}+S\times(P_s-P_e)\).<br>
+						\(S\) : la surface de sortie (tuyère) ; \(q_m\) : le débit massique (en kg/s) ; \(P_s\)∶ pression statique en sortie de tuyère ; \(P_e\)∶ pression extérieure.<br>
+						Dans un cas simplifié (rendement au max) : \(P_s=P_e\)<br>
+						Donc : \(\vec{F_p}=q_m\times\vec{v_e}\) . Plus précisément, soit la norme de la force de propulsion notée : $$Fp=qm×ve$$
+						avec \(v_e=\sqrt{(\frac{2k}{k-1})\times(\frac{RT_c}{M})\times{(1-\frac{P_e}{P_c})}^\frac{k-1}{k}}\), \(T_c\) : la température de combustion, \(M\) : la masse moléculaire du gaz, \(R\) : la constante des gaz, \(P_e\) : la pression extérieure, \(k\) le rapport des chaleurs spécifique \(\frac{C_p}{C_v}\) , \(C_p\) : la chaleur spécifique à pression constante, \(C_v\) : la chaleur spécifique à volume constant.</p>
+
+						<p>La chaleur spécifique : la quantité d’énergie thermique/calorifique (chaleur) à donner à 1 gramme d’une substance pour augmenter sa température de 1°K</p>
+
+						<p>Centre de poussée : est le point d'application de la résultante des forces de poussée, c’est-à-dire le point sur une surface où s’applique une force de poussé sans provoquer de mouvement de rotation. Il permet de déterminer l’emplacement de la force de poussé sur un objet utile pour étudier l’état (stable ou instable) d’une fusée.</p>
+
+						<p>Centre de poussée aérodynamique (ou centre de pression aérodynamique) : est le point sur une surface où la somme des moments de rotation causés par la pression aérodynamique est considérée comme nulle. Il est important pour comprendre le comportement d’un objet en mouvement dans un fluide, donc de connaître la position de la force de portance et de traînée.</p>
+
+						<p>Marge statique : distance entre le CDG et le CPA, exprimé en diamètres de référence</p>
+						<p>Centre de gravité : point matériel où s’appliquent les forces de pesanteur </p>
+						<p>Finesse : une caractéristique aérodynamique qui représente le rapport entre la portance et la traînée. </p>
+						<p>Gradient de portance (\(C_{n\alpha}\)) : intensité de la résultante des forces aérodynamiques appliquées au CPA, autrement dit, l’aptitude à la portance d’une surface, d’un corps ou d’une aile, et dépend en partie de la taille des ailerons ; dépend de l’angle d’incidence (\(\alpha\)) et de la position du centre de poussée aérodynamique (\(X_{CPA}\)) ; \(({C_{n\alpha})}_{Total}=\sum_{i=1}^{n}{{(C}_{n\alpha})}_i\) et $${{(X}_{CPA})}_{Total}=\frac{\sum_{i=1}^{n}{{{(C}_{n\alpha})}_i\ast({X_{CPA})}_i}}{\sum_{i=1}^{n}{{(C}_{n\alpha})}_i}$$</p>
+
+						<p>Finesse : une caractéristique aérodynamique qui représente le rapport entre la portance et la traînée.</p>
+						<p>$$f=\frac{\vec{R_N}}{\vec{R_A}}=\frac{C_N}{C_A}$$</p>
+
+						<p>Stabilité d’un objet : sa faculté à revenir vers sa position d’équilibre après avoir subi une force extérieure (perturbation)</p>
+
+						<div class="titre">Critères stabilité mini-fusée</div>
+
+						<p>Marge statique (MS) doit être comprise entre 1,5 et 6 (en mm car dépend du diamètre de référence)</p>
+						<p>Gradient de portance (\(C_{n\alpha}\)) : doit être compris entre 15 et 30 (sans unité)</p>
+						<p>Finesse L/D doit être comprise entre 10 et 20 (sans unité)</p>
+						<p>Produit \(MS\cdot C_{n\alpha}\) doit être compris entre 30 et 100 (en mm)</p>
+						<p>Vitesse en sortie de rampe doit être supérieure à 18 m/s</p>
+					</div>
+				</div>
+			</details>
+		</section>
+
+	</div>
+
+	<div id="footer"></div>
+</body>
+
+</html>
+
