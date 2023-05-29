@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>space</title>
+  <link rel="stylesheet" type="text/css" href="orbitstylekepler.css">
+</head>
+
+<body>
+  <img src="Logo-rond.png" alt="Logo" class="Logo">
+  <img src="Soleil.png" alt="planete" class="planete" id="planete">
+
+  <div id="division_canvas">
+    <!--Canvas-->
+    <canvas id="Canvas" width="800" height="500"></canvas>
+  </div>
+
+  <!--
+  <div>
+    <label for="vit">Entrer une vitesse initiale (m/s): </label>
+    <input type="text" id="vit" name="entreevit" required minlength="4" maxlength="8" size="10" value="100">
+  </div>
+  -->
+
+  <div class="Selectors">
+    <label for="p" id="pLabel">Paramètre: 50</label><br>
+    <input type="range" id="p" name="entreep" min="20" max="100" value="50" step="1" list="Listep" onchange="pChange(this.value)">
+
+    <datalist id="Listep">
+      <option value="0" label="0°"></option>
+      <option value="10" label="10"></option>
+      <option value="20" label="20"></option>
+    </datalist>
+
+    <label for="e" id="eLabel">Exentricité : 0.3</label><br>
+    <input type="range" id="e" name="entreee" min="0" max="2" value="0.3" step="0.1" list="Listee" onchange="eChange(this.value)">
+
+    <datalist id="Listee">
+      <option value="0" label="0"></option>
+      <option value="2" label="2"></option>
+    </datalist>
+  </div>
+
+  <div>
+    <input type="button" id="btn" value="Lancer la simulation">
+  </div>
+  <input type="button" id="reset" value="Réinitialiser la simulation">
+
+
+  <script src="Plotly.js"></script>
+  <script src="scriptkepler.js"></script>
+</body>
+
+</html>

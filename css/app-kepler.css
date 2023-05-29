@@ -1,7 +1,7 @@
 
 
 .js-app {
-    overflow:;
+    overflow: hidden;
 }
 
 canvas {
@@ -25,7 +25,6 @@ canvas {
     width: 30px;
     height: 65px;
 }
-
 
 .trace{
     position: relative;
