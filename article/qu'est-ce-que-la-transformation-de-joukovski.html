@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SkyHub - La transformation de Joukovski</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="article.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script>
+	  $(function(){
+  		$("#footer").load("../footer.html");
+  		$("#navbar").load("../navbar.html");
+	  });
+	</script>
+	<style type="text/css">
+		nav {
+			position: absolute;
+		}
+		nav.sticky {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="navbar"></div>
+
+	<section class="home black" id="home">
+			<h1>La transformation de Joukovski</h1>
+	</section>
+
+	<div class="wrapp">
+
+		<section class="section">
+			<div class="references">
+				<i class="fa fa-user-circle-o"></i> Hugo Dubouchet
+				<br>
+				<i class="fa fa-clock-o" aria-hidden="true"></i> 29 mai 2023
+			</div>
+
+			<div class="titre">Qui est son auteur ? Qui est Nikolaï Joukovski ?</div>
+
+			<p>Il est difficile de résumer les exploits de Nikolaï Joukovski, celui-ci étant considéré comme l’un des plus importants scientifiques russes.</p>
+
+			<p>Joukovski a notamment été l’un des premiers à travailler sur les profils d’aile. Il est aussi le fondateur du TsAGI, le plus important institut de recherche aéronautique russe. Il est évident que Joukovski a laissé son empreinte dans l’histoire de l’aéronautique, au point d’avoir été surnommé par Lénine : « Le père de l’aviation russe ».</p>
+
+			<p>Il est aussi important de noter que ses travaux ne se limitaient pas à l’aéronautique ou l’aérodynamique mais aussi à l’hydraulique, la mécanique, les mathématiques ou encore l’astronomie !</p>
+
+			<p>Et pourtant, ce n’est pas lui qui a inventé la transformation de Joukovski ! Celle-ci est en réalité due à <a href="https://fr.wikipedia.org/wiki/Otto_Blumenthal" class="learn-more" target="_blank">Otto Blumenthal</a>. Ce n’est en fait pas rare dans quelque domaine de la science que ce soit qu’un travail ne soit pas nommé d’après son auteur.</p>
+
+			<p>Ce sont ses thèses et articles en mathématiques et en mathématiques appliquées puis plus tard ses recherches en aéronautique qui ont construit la réputation de Blumenthal.</p>
+
+			<p>Il était aussi l’éditeur des « Matematische Annalen » (Annales Mathématiques) de 1906 à 1938, une revue trimestrielle en anglais, allemand et français recensant les avancées mathématiques majeures au cours du temps.</p>
+
+			<p>Mais alors, pourquoi a-t-elle été nommée d’après Nikolaï Joukovski ? C’est simplement parce que ce dernier a effectué les travaux les plus importants avec, notamment les calculs des flux de l’air autour des ailes ce qui a été la fondation de nos connaissances actuelles. Sans lui et ce qu’il a accompli, on aurait bien du mal à fabriquer des avions si performants.</p>
+		</section>
+
+		<section class="section">
+			<div class="titre">Qu’est-ce que la transformation de Joukovski ?</div>
+
+			<p>La transformation de Joukovski est une transformation conforme, un outil mathématique qui permet de changer la forme géométrique d’un objet en une autre en utilisant une fonction complexe : la fonction de Joukovski. Ce qu’il faut retenir, c’est que la transformation de Joukovski transforme un cercle en profil d’aile à partir d’une équation : \(\xi=z+\frac{c^2}{z}\)</p>
+
+			<p>Le code de Joukovski s'appuie principalement sur l'étude du flux crée par un doublet, un vortex et un flux initiale uniforme constant.</p>
+
+		</section>
+
+		<section class="section">
+			<div class="titre">Limites</div>
+
+			<p>La transformation de Joukovski fonctionne parfaitement, nous permettant de dessiner et modéliser des profils d’aile. Cependant, cette méthode date déjà de plus d’un siècle, depuis, les entreprises telles qu’Airbus qui travaillent quotidiennement avec des véhicules ailés parviennent à faire des simulations autrement plus précises et efficaces à l’aide d’ordinateurs que Joukovski n’avait pas la chance d’avoir. En effet, les travaux de Joukovski, bien que formidables, ne prenaient pas en compte la viscosité de l’air, sa compressibilité ou encore les turbulences potentielles. En bref, l’air était considéré comme un fluide parfait, mais on sait à présent que c’est très loin de la vérité, d’où les avancées nombreuses réalisées depuis.</p>
+
+			<p>De plus, nous continuons à développer de meilleurs modèles d’ailes, certes basés sur le profil obtenu par la transformation Joukovski, mais qui la font sembler simpliste et peu efficace à côté. Des profils plus efficaces ont d’ailleurs été développés peu de temps après l’invention de la transformation de Joukovski.</p>
+
+			<p>D’autre part, les profils obtenus par la transformation de Joukovski ne sont pas efficaces dès que l’on atteint des vitesses supersoniques. Il faut alors s’intéresser à d’autres formes d’ailes.</p>
+		</section>
+
+		<section class="section">
+			<div class="titre">Télécharger les codes de calculs</div>
+			<p>Voici un code python que vous pouvez exécuter par vous-même pour approfondir votre connaissance du sujet ! Sont affichées les lignes de courants que suit l’air autour de l’aile ainsi que le champ de pression.</p>
+			<a href="../py/Joukovski_Transformation.py" download="Joukovski_Transformation.py" style="text-decoration: underline;">Transformation de Joukovski</a>
+			<br>
+			<a href="../py/Simulation_gif.py" download="Simulation_gif.py" style="text-decoration: underline;">simu ?</a>
+			<br>
+			<a href="../py/Simulation_simple.py" download="Simulation_simple.py" style="text-decoration: underline;">simu 2 ?</a>
+		</section>
+
+	</div>
+
+	<div id="footer"></div>
+</body>
+
+</html>
+
