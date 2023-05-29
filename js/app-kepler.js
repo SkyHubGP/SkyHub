@@ -20,7 +20,7 @@ let image_planete= document.getElementById("planete");
 posPlanete = new Array(image_planete.style.left, image_planete.style.top);
 
 //Image Satellite
-let sat= document.getElementById("sat");
+let sat = document.getElementById("sat");
 sat.classList.add("sat");
 posSat = new Array(sat.style.left, sat.style.top);
 

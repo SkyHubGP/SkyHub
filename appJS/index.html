@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Interface Trajectoire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <img src="Logo-rond.png" alt="Logo" class="Logo">
+
+  <div id="division_canvas" class="division_canvas">
+    <!--Canvas-->
+    <canvas id="Canvas" width="800" height="500"></canvas>
+  </div>
+  <div class="Selectors">
+    <label for="angle" id="angleLabel">Angle : 45°</label><br>
+    <input type="range" id="angle" name="angle" min="0" max="90" value="45" step="1" list="ListeAngles"
+      onchange="rotate(this.value)">
+
+    <datalist id="ListeAngles">
+      <option value="0" label="0°"></option>
+      <option value="45" label="45°"></option>
+      <option value="90" label="90°"></option>
+    </datalist>
+  </div>
+
+  <div>
+      <input type="checkbox" id="frott" name="frottements laminaires" value="frott">
+      <label for="frottements laminaires">Frottements laminaires</label>
+
+  </div>
+  <div>
+  	<label for="vit">Entrer une vitesse initiale (m/s): </label>
+
+	<input type="text" id="vit" name="entreevit"
+       min="4" max="800" size="10" value="100">
+  </div>
+  <div position>
+  	<label for="vit">Entrer le poids du boulet (kg): </label>
+
+	<input type="text" id="poids" name="entreepd"
+       minlength="4" maxlength="8" size="10" value="5.95">
+  </div>
+
+
+  <div>
+  	<input type="button" id="btn" value="Lancer la simulation">
+  </div>
+
+
+  <div class="trace" id="trace"></div>
+
+  <div class="erase">
+      <input type ="button" id="erase" value="Effacer les tracés">
+  </div>
+
+  <script src="Plotly.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

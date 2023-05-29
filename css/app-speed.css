@@ -1,7 +1,7 @@
 
 
 .js-app {
-    overflow:;
+    overflow: hidden;
 }
 
 canvas {
@@ -24,6 +24,11 @@ canvas {
     object-fit: cover;
     width: 30px;
     height: 65px;
+}
+#canon{
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
 }
 
 
