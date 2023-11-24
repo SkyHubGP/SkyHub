@@ -54,6 +54,11 @@ img {
 }
 #articles .wrap {
 	display: flex;
+	border-right: 5px solid ;
+	border-bottom: 5px solid ;
+	borderleft: 2px solid ;
+	border-top: 2px solid ;
+	border-radius: 20px;
 }
 section .article {
 	transition: margin-bottom .3s ease-out;
@@ -66,11 +71,6 @@ section .article >*:not(:last-child) {
 }
 #articles .titre {
   	font-size: 29px;
-	border-right: 5px solid ;
-	border-bottom: 5px solid ;
-	borderleft: 2px solid ;
-	border-top: 2px solid ;
-	border-radius: 20px;
 }
 #articles .content {
 	width: 70%;
