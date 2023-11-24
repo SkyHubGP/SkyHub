@@ -50,11 +50,7 @@ img {
 	padding: 30px 0;
 	transition: padding .3s ease;
 	font-family: 'Poppins', sans-serif;
-	border-right: 5px solid ;
-	border-bottom: 5px solid ;
-	borderleft: 2px solid ;
-	border-top: 2px solid ;
-	border-radius: 20px;
+	
 }
 #articles .wrap {
 	display: flex;
@@ -69,7 +65,12 @@ section .article >*:not(:last-child) {
 	margin-bottom: 1vh;
 }
 #articles .titre {
-  font-size: 29px;
+  	font-size: 29px;
+	border-right: 5px solid ;
+	border-bottom: 5px solid ;
+	borderleft: 2px solid ;
+	border-top: 2px solid ;
+	border-radius: 20px;
 }
 #articles .content {
 	width: 70%;
