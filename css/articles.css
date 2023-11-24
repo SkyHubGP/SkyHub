@@ -54,20 +54,22 @@ img {
 }
 #articles .wrap {
 	display: flex;
-	border-right: 5px solid ;
-	border-bottom: 5px solid ;
-	borderleft: 2px solid ;
-	border-top: 2px solid ;
-	border-radius: 20px;
+	
 }
 section .article {
 	transition: margin-bottom .3s ease-out;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 500;
+
 }
 section .article >*:not(:last-child) {
 	display: block;
 	margin-bottom: 1vh;
+	border-right: 5px solid ;
+	border-bottom: 5px solid ;
+	borderleft: 2px solid ;
+	border-top: 2px solid ;
+	border-radius: 20px;
 }
 #articles .titre {
   	font-size: 29px;
